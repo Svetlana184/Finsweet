@@ -1,0 +1,19 @@
+:root {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Poppins;
+}
+*,*{
+  padding: 0;
+  margin: 0;
+}
+@font-face {
+  font-family: Poppins;
+  src: url(/finsweet/src/fonts/Poppins/Poppins-Black.ttf);
+}
+@font-face {
+  font-family: PoppinsBold;
+  src: url(/finsweet/src/fonts/Poppins/Poppins-Bold.ttf);
+}
