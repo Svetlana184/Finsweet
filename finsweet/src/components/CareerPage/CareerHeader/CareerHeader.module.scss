@@ -1,0 +1,55 @@
+@use '../../../styles/tokens' as t;
+
+.career_header{
+    margin-top: 8vh;
+    margin-bottom: 4vh;
+    width: 80%;
+    padding-left: 10%;
+    padding-right: 10%;
+    height: auto;
+    .career_text{
+        height: 70vh;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        div{
+            height: 100%;
+            width: calc(100% - 48px);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            h6{
+                font-size: 14px;
+                letter-spacing: 3px;
+            }
+            h2{
+                font-size: 48px;
+                width: 50%;
+                text-align: center;
+            }
+            p{
+                color: t.$dark-text;
+                opacity: 87%;
+                width: 50%;
+                text-align: center;
+            }
+            div{
+                height: auto;
+            }
+        }
+        .career_shape{
+            width: 48px;
+        }
+    }
+    .career_list{
+        margin-top: 8vh;
+        background-color: t.$light-blue;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+}

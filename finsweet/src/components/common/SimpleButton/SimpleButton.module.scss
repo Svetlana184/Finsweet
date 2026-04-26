@@ -1,0 +1,24 @@
+@use '../../../styles/tokens' as t;
+
+.simple_button{
+    width: 231px;
+    height: 64px;
+    background-color: t.$button-blue;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;  
+    .text{
+        color: white;
+    }
+    .shape{
+        width: 29px;
+        display: flex;
+        align-self: flex-start;
+        justify-self: flex-start;
+    }
+    .arrow{
+        width: 20px;
+        margin-left: 12px;
+    }
+}

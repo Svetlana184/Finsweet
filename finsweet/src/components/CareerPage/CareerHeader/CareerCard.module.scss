@@ -1,0 +1,28 @@
+.career_card{
+    background-color: white;
+    width: 306px;
+    height: 195px;
+    margin: 32px;
+    padding: 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .career_text{
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        p{
+            opacity: 60%;
+        }
+       
+    }
+    a{
+        color: rgba(93, 95, 239, 1);
+        text-decoration: none;
+        img{
+            width: 20px;
+            margin-left: 12px;
+        }
+    }
+}

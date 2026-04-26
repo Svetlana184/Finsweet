@@ -1,0 +1,35 @@
+.culture{
+    background-color: rgba(250, 250, 252, 1);
+    width: 80%;
+    padding-left: 10%;
+    padding-right: 10%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    .list{
+        height: 60%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .text{
+        width: 40%;
+        height: 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        h6{
+            font-size: 14px;
+            letter-spacing: 3px;
+        }
+        h3{
+            font-size: 36px;
+        }
+        p{
+            opacity: 60%;
+        }
+    }
+}

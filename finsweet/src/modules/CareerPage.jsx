@@ -1,8 +1,15 @@
-import React from 'react'
+import React from 'react';
+import Subscribe from "../components/common/Subscribe/Subscribe"
+import CareerHeader from '../components/CareerPage/CareerHeader/CareerHeader';
+import Culture from '../components/CareerPage/Culture/Culture';
 
 const CareerPage = () => {
   return (
-    <div>CareerPage</div>
+    <>
+      <CareerHeader/>
+      <Culture/>
+      <Subscribe/>
+    </>
   )
 }
 

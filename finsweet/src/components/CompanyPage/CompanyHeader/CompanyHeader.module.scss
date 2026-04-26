@@ -1,0 +1,57 @@
+@use '../../../styles/tokens' as t;
+
+.company_header{
+    width: 80%;
+    height: 91vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 8vh;
+    margin-bottom: 4vh;
+    .company_list{
+            height: 60%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            .shape{
+                width: 346px;
+                display: flex;
+                justify-self: flex-end;
+                align-self: flex-end;
+            }
+            div{
+                width: 100%;
+                 display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+        }
+    .company_header_top{
+        height: 30%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        img{
+            width: 48px;
+        }
+        .company_text{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .square{
+                width: 28px;
+                height: 28px;
+                background-color: t.$orange-color;
+            }
+            h6{
+                text-transform: uppercase;
+                letter-spacing: 3px;
+                font-size: 14px;
+            }
+            h3{
+                font-size: 48px;
+            }
+        }
+    }
+}

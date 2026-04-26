@@ -1,0 +1,53 @@
+@use '../../../styles/tokens' as t;
+
+$nav-bg: rgba(35, 37, 54, 1);
+$nav-link-color: rgba(255, 255, 255, 0.6);
+$nav-accent-color: rgba(255, 211, 175, 1);
+$layout-padding-x: 160px;
+$logo-width: 122px;
+$arrow-width: 20px;
+$arrow-gap: 8px;
+
+.nav_fin {
+  width: 100%;
+  height: 9vh;
+  background-color: $nav-bg;
+
+  .nav_fin_inner {
+    width: auto;
+    height: 100%;
+    padding-left: $layout-padding-x;
+    padding-right: $layout-padding-x;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo img {
+      width: $logo-width;
+    }
+
+    ul {
+      width: 40%;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      li {
+        a {
+          color: $nav-link-color;
+          text-decoration: none;
+        }
+
+        img {
+          width: $arrow-width;
+          margin-left: $arrow-gap;
+        }
+
+        .clone_link {
+          color: $nav-accent-color;
+        }
+      }
+    }
+  }
+}

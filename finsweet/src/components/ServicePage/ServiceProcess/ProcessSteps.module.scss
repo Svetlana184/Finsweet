@@ -1,0 +1,67 @@
+@use '../../../styles/tokens' as t;
+
+.process_steps{
+    width: 395px;
+    height: 184px;
+    border: 1px rgba(35, 37, 54, 0.17) solid;
+    display: flex;
+    flex-direction: column;
+    .shape_top{
+        display: flex;
+        align-self: flex-start;
+        justify-self: flex-start;
+    }
+    .shape_bottom{
+        display: flex;
+        align-self: flex-end;
+        justify-self: flex-end;
+    }
+    
+    div{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        h6{
+            display: flex;
+            align-self: flex-end;
+            justify-self: flex-end;
+            font-size: 24px;
+            color: t.$dark-text;
+            opacity: 20%;
+            margin-right: 16px;
+            margin-top: 12px;
+        }
+        div{
+            display: flex;
+            flex-direction: row;
+            align-self: center;
+            justify-self: center;
+            justify-content: space-between;
+            width: 90%;
+            .text{
+                display: flex;
+                flex-direction: column;
+                width: 80%;
+                p{
+                    color: t.$dark-text;
+                    opacity: 60%;
+                }
+            }
+            .icon{
+                width: 47px;
+                height: 47px;
+                border-radius: 20px;
+                border: 1px transparent solid;
+                background-color: rgba(255, 211, 175, 0.17);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                align-self: flex-start;
+                img{
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+        }
+    }
+}

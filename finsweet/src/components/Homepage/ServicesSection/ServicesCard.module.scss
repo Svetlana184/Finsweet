@@ -1,0 +1,35 @@
+@use '../../../styles/tokens' as t;
+
+.services_card{
+    background-color: white;
+    width: 357px;
+    height: 287px;
+    padding: 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    a{
+        color: rgba(68, 76, 252, 1);
+        text-decoration: none;
+        img{
+            width: 24px;
+            margin-left: 12px;
+        }
+    }
+    p{
+        color: rgba(93, 95, 109, 1);
+    }
+    .icon{
+        width: 47px;
+        height: 47px;
+        background-color: t.$orange-color;
+        border-radius: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+            height: 24px;
+            width: 24px;
+        }
+    }
+}

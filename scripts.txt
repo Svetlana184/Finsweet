@@ -1,0 +1,44 @@
+create table Metrics(
+	id_metric serial primary key,
+	value varchar(40),
+	description varchar(50)
+);
+
+create table Steps(
+	id_step serial primary key,
+	icon bytea,
+	title varchar(100),
+	description varchar(200),
+	order_step varchar(10),
+	type varchar(50) check (type in ('expertise', 'services', 'process', 'skills'))
+);
+
+create table Reviews(
+	id_review serial primary key,
+	text varchar(500),
+	img bytea,
+	name varchar(100),
+	info varchar(100),
+	company bytea
+);
+
+create table Services_Info(
+	id_services_info serial primary key,
+	pic bytea,
+	tag varchar(100),
+	title varchar(200),
+	text varchar(500)
+);
+
+create table Teammates(
+	id_temmates serial primary key,
+	pic bytea,
+	first_name varchar(100),
+	last_name varchar(100),
+	position varchar(50),
+	description varchar(300),
+	twi_link varchar(300),
+	facebook_linf varchar(300),
+	inst_link varchar(300)
+);
+

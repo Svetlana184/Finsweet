@@ -1,0 +1,116 @@
+@use '../../../styles/tokens' as t;
+
+.contact_form{
+    width: 80%;
+    height: 80vh;
+    margin-top: 8vh;
+    margin-bottom: 4vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .contact_left{
+        height: 100%;
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .contact_text{
+            height: 30%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            p{
+                opacity: 87%;
+            }
+        }
+        .contact_form{
+            display: flex;
+            flex-direction: column;
+            height: 60px;
+            margin: 0;
+            input[type=text] {
+                border: none;
+                border-bottom: 2px solid t.$dark-text;
+                opacity: 20%;
+            }
+        }
+        .contact_form_2{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 124px;
+            margin: 0;
+            form{
+                height: 90%;
+                    input[type=text] {
+                    height: 100%;
+                    border: none;
+                    border-bottom: 2px solid t.$dark-text;
+                    opacity: 20%;
+                }
+            }
+            
+        }
+        .contact_square{
+            width: 24px;
+            height: 24px;
+            background-color: t.$orange-color;
+        }
+        h3{
+            font-size: 48px;
+        }
+        h6{
+            font-size: 14px;
+            letter-spacing: 3px;
+        }
+    }
+    .contact_right{
+        width: 35%;
+        height: 85%;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        .contact_shape_vertical{
+            width: 24px;
+        }
+        .contact_right_par{
+            display: flex;
+            width: calc(100% - 24px);
+            height: 100%;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-end;
+            .contact_info{
+                ul{
+                    list-style: none;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    width: 45%;
+                }
+                background-color: t.$secondary-blue;
+                width: calc(100% - 166px);
+                padding: 83px;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                text-align: left;
+                color: white;
+                .create_line{
+                    background-color: rgba(0, 0, 0, 0.08);
+                    height: 1px;
+                    width: 80%;
+                }
+                p{
+                    opacity: 60%;
+                    width: 60%;
+                }
+                h5{
+                    width: 45%;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}

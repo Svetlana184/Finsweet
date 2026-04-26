@@ -1,0 +1,63 @@
+@use '../../styles/tokens' as t;
+
+.privacy_section{
+    height: 160vh;
+    width: 80%;
+    margin-top: 8vh;
+    margin-bottom: 4vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .privacy_text{
+        height: 85%;
+        div{
+            height: calc(100% - 216px);
+            background-color: t.$light-blue;
+            padding-top: 96px;
+            padding-bottom: 96px;
+            padding-left: 221px;
+            padding-right: 221px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            h4{
+                font-size: 36px;
+                padding: 0;
+            }
+            h5{
+                font-size: 24px;
+            }
+        }
+        img{
+            height: 24px;
+        }
+    }
+    .privacy_title{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        height: 10%;
+        div{
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .privacy_square{
+            width: 24px;
+            height: 24px;
+            background-color: rgba(255, 211, 175, 1);
+        }
+        h3{
+            font-size: 48px;
+        }
+        p{
+            color: t.$dark-text;
+            opacity: 60%;
+        }
+        img{
+            width: 48px;
+        }
+    }
+}

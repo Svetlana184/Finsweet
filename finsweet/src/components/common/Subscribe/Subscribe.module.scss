@@ -1,0 +1,46 @@
+@use '../../../styles/tokens' as t;
+
+.subscribe{
+    margin-top: 4vh;
+    margin-bottom: 4vh;
+    width: 80%;
+    height: 50vh;
+    background-color: t.$secondary-blue;
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    justify-content: space-between;
+    color: white;
+    .sub_1{
+        height: 80px;
+        align-self: flex-start;
+        justify-self: flex-start;
+    }
+    .sub_2{
+        height: 100%;
+        align-self: flex-end;
+        justify-self: flex-end;
+    }
+    .par{
+        align-self: center;
+        width: 35%;
+        h5{
+            letter-spacing: 3px;
+        }
+        h3{
+            font-size: 36px;
+
+        }
+    }
+    form{
+        align-self: center;
+        width: 30%;
+        height: 10%;
+        input{
+            width: calc(100% - 29px);
+            height: calc(100% - 29px);
+            padding: 29px;
+            color: rgba(35, 37, 54, 1);
+        }
+    }
+}

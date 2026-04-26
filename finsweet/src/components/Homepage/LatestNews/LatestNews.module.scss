@@ -1,0 +1,30 @@
+@use '../../../styles/tokens' as t;
+
+
+.latest{
+    margin-bottom: 4vh;
+    width: 80%;
+    height: 40vh;
+    background-color: t.$light-blue;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .latest_shape{
+        width: 16px;
+        height: 16px;
+        background-color: rgba(102, 109, 255, 1);
+    }
+    h3{
+        font-size: 48px;
+    }
+    .list{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+}

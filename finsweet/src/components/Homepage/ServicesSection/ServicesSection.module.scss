@@ -1,0 +1,33 @@
+@use '../../../styles/tokens' as t;
+
+.services_section{
+    margin-bottom: 8vh;
+    height: 100vh;
+    width: 80%;
+    padding-left: 10%;
+    padding-right: 10%;
+    background-color: t.$orange-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    .services_list{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .services_text{
+        height: 30%;
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        h6{
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 14px;
+        }
+        h3{
+            font-size: 48px;
+        }
+    }
+}

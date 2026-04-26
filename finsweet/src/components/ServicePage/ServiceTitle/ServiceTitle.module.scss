@@ -1,0 +1,55 @@
+@use '../../../styles/tokens' as t;
+
+
+.service_title{
+    background-color: t.$orange-color;
+    height: 70vh;
+    width: 80%;
+    padding-left: 10%;
+    padding-right: 10%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    ul{
+        list-style: none;
+        height: 50%;
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        li{
+            a{
+                font-size: 24px;
+                text-decoration: none;
+                color: t.$dark-text;
+                font-weight: 600;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                img{ 
+                    width: 20px;
+                    margin-left: 16px;
+                }
+            }
+        }
+    }
+    .service_par{
+        width: 50%;
+        height: 70%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        h6{
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+        h3{
+            font-size: 48px;
+        }
+        .service_par_text{
+            color: rgba(35, 37, 54, 1);
+        }
+    }  
+}

@@ -1,0 +1,43 @@
+@use '../../../styles/tokens' as t;
+
+.service_process{
+    height: 90vh;
+    background-color: t.$light-purple;
+    width: 80%;
+    padding-left: 10%;
+    padding-right: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    .service_process_steps{
+        height: 55%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .service_process_text{
+        width: 100%;
+        height: 20%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        img{
+            width: 29px;
+        }
+        div{
+            width: 50%;
+            h6{
+                text-transform: uppercase;
+                letter-spacing: 3px;
+                font-size: 14px;
+            }
+            h3{
+                font-size: 48px;
+            }
+            p{
+                color: t.$dark-text;
+            }
+        }
+    }
+}

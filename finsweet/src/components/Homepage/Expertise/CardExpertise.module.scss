@@ -1,0 +1,31 @@
+@use '../../../styles/tokens' as t;
+
+.card_exp{
+    width: 483px;
+    height: 108px;
+    padding: 32px;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    .icon{
+        width: 47px;
+        height: 47px;
+        background-color: t.$orange-color;
+        border-radius: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+            height: 24px;
+            width: 24px;
+        }
+    }
+    div{
+        width: 80%;
+        p{
+            color: rgba(93, 95, 109, 1);
+        }
+    }
+}
