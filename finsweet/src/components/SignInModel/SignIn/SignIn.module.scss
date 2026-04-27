@@ -1,0 +1,74 @@
+@use '../../../styles/tokens' as t;
+
+.sign_in_modal{
+    width: 30vw;
+    height: 50vh;
+    padding: 5%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .signin{
+            height: 90%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            h3{
+                text-align: start;
+                font-size: 24px;
+            }
+            form{
+                width: 100%;
+                input{
+                    width: 80%;
+                    background-color: #F9F9FF;
+                    border: none;
+                    padding: 10px 20px;
+                }
+            }
+            div{
+                width: 100%;
+                height: 10%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                .cancel_button{
+                    width: 231px;
+                    height: 64px;
+                    background-color: t.$light-blue;
+                    border: none;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center; 
+                    .text{
+                        color: black;
+                    }
+                    .shape{
+                        width: 29px;
+                        display: flex;
+                        align-self: flex-start;
+                        justify-self: flex-start;
+                    }
+                }
+            }
+        }
+    ul{
+        height: 6%;
+        list-style: none;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        li{
+            button{
+                background-color: transparent;
+                border: none;
+                width: 100%;
+                height: 100%;
+            }
+            width: 30%;
+            height: 100%;
+        }
+        
+    }
+}

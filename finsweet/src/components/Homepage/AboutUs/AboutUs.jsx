@@ -59,7 +59,7 @@ const AboutUs = () => {
                     </li>)}     
                 </ul>
                 <div>
-                    <Link to="/">Read about us</Link>
+                    <Link to="/company">Read about us</Link>
                     <img src={arrow} alt="" />
                 </div>
             </div>

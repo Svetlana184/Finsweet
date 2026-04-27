@@ -42,3 +42,10 @@ create table Teammates(
 	inst_link varchar(300)
 );
 
+create table users(
+	id_user serial primary key,
+	name_user varchar(100),
+	password varchar(300),
+	age_user int,
+	role varchar(200)
+);

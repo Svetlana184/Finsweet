@@ -12,6 +12,7 @@ import PrivacyPolicy from './components/PrivacyPolicy/PrivacyPolicy'
 import TeamTemplatePage from "./modules/TeamTemplatePage"
 import InnerBlogPage from './modules/InnerBlogPage'
 import InnerCareerPage from "./modules/InnerCareerPage"
+import AdminPage from './modules/AdminPage'
 
 function App() {
 
@@ -67,6 +68,11 @@ function App() {
         <Route path='/team/:id' element={
           <>
             <TeamTemplatePage/>
+          </>
+        }/>
+        <Route path='/admin' element={
+          <>
+            <AdminPage/>
           </>
         }/>
       </Routes>

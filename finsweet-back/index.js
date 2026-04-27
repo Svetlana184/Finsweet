@@ -101,7 +101,7 @@ app.post('/api/auth/login', async (req, res) => {
 
     try {
         const result = await pool.query(
-            'SELECT id, name_user, password, role FROM users WHERE name_user = $1',
+            'SELECT id_user, name_user, password, role FROM users WHERE name_user = $1',
             [name_user]
         )
 
@@ -118,7 +118,7 @@ app.post('/api/auth/login', async (req, res) => {
 
         const token = jwt.sign(
             {
-                id: user.id,
+                id: user.id_user,
                 name_user: user.name_user,
                 role: user.role
             },
@@ -128,7 +128,7 @@ app.post('/api/auth/login', async (req, res) => {
 
         res.json({
             user: {
-                id: user.id,
+                id: user.id_user,
                 name_user: user.name_user,
                 role: user.role
             },
@@ -136,7 +136,7 @@ app.post('/api/auth/login', async (req, res) => {
         })
     } catch (error) {
         console.error('Login error:', error)
-        res.status(500).json({ error: 'Ошибка сервера' })
+        res.status(500).json({ error: 'Ошибка сервера', data: error })
     }
 })
 

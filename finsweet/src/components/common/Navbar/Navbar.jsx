@@ -3,6 +3,8 @@ import logo from "../../../assets/common/logo_white.svg"
 import arrow from "../../../assets/icons/right_arrow.svg"
 import { Link } from "react-router-dom";
 import { navbarLinks } from '../../../mockupData/commonData';
+import Popup from "reactjs-popup"
+import SignIn from "../../SignInModel/SignIn/SignIn"
 
 const Navbar = () => {
   return (
@@ -18,7 +20,9 @@ const Navbar = () => {
               </li>
             ))}
             <li>
-                <button>Log in</button>
+              <Popup trigger={<button>Sign In</button>} modal nested>
+                <SignIn/>
+              </Popup>
             </li>
             <li>
                 <Link className={styles.clone_link} to="/">Clone project</Link>
@@ -27,6 +31,7 @@ const Navbar = () => {
             
         </ul>
         </div>
+        
     </nav>
   )
 }
