@@ -1,0 +1,41 @@
+.teamwork{
+    width: 80%;
+    margin-top: 8vh;
+    margin-bottom: 8vh;
+    height: 90vh;
+    padding-left: 10%;
+    padding-right: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .teamwork_list{
+        height: 70%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        div{
+            width: 25%;
+            img{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+    .teamwork_text{
+        width: 45%;
+        height: 25%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        h6{
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+        h3{
+            font-size: 36px;
+        }
+    }
+}

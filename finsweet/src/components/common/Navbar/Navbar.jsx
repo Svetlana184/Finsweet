@@ -18,9 +18,13 @@ const Navbar = () => {
               </li>
             ))}
             <li>
+                <button>Log in</button>
+            </li>
+            <li>
                 <Link className={styles.clone_link} to="/">Clone project</Link>
                 <img src={arrow} alt="" />
             </li>
+            
         </ul>
         </div>
     </nav>

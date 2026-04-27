@@ -27,7 +27,7 @@ $arrow-gap: 8px;
     }
 
     ul {
-      width: 40%;
+      width: 50%;
       list-style: none;
       display: flex;
       align-items: center;
@@ -43,7 +43,11 @@ $arrow-gap: 8px;
           width: $arrow-width;
           margin-left: $arrow-gap;
         }
-
+        button{
+          background-color: transparent;
+          border: none;
+          color: $nav-link-color;
+        }
         .clone_link {
           color: $nav-accent-color;
         }

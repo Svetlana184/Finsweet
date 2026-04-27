@@ -6,7 +6,7 @@ const ServicesInfo = () => {
     const [data, setData] = useState(servicesInfo);
   return (
     <>
-    {data.map(item => <ServicesParagraph title={item.title} text={item.text} tag={item.tag} img={item.img} direction={item.direction} color={item.color}/>)}
+    {data.map(item => <ServicesParagraph key={item.id} id={item.id_name} title={item.title} text={item.text} tag={item.tag} img={item.img} direction={item.direction} color={item.color}/>)}
     </>
   )
 }

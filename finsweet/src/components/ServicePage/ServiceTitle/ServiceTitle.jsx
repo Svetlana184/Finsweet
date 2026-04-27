@@ -15,10 +15,10 @@ const ServiceTitle = () => {
         </div>
         <ul>
             <li>
-                <Link to="">Technical support</Link>
+                <Link to="#support">Technical support</Link>
             </li>
             <li>
-                <Link to="">
+                <Link to="#development">
                     Development
                     <img src={arrow} alt="" />
                 </Link>

@@ -1,0 +1,44 @@
+@use '../../../styles/tokens' as t;
+
+.job_title{
+    width: 70%;
+    height: 30vh;
+    padding-left: 15%;
+    padding-right: 15%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 8vh;
+    margin-bottom: 8vh;
+    .job_right{
+        height: 100%;
+        width: 40%;
+        background-color: t.$orange-color;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        div{
+            width: 80%;
+            height: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+    }
+    .job_left{
+        width: 40%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        h6{
+            font-size: 14px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+        h3{
+            font-size: 36px;
+        }
+    }
+}
