@@ -5,6 +5,8 @@ import career_img from "../../../assets/career/career_img.png";
 import {positions} from "../../../mockupData/careerData"
 import CareerCard from './CareerCard';
 import styles from "./CareerHeader.module.scss"
+import SimpleTag from '../../common/SimpleTag/SimpleTag';
+import SimpleTextDark from '../../common/SimpleTextDark/SimpleTextDark';
 
 const CareerHeader = () => {
     const [data, setData] = useState(positions);
@@ -14,9 +16,9 @@ const CareerHeader = () => {
         <div className={styles.career_text}>
             
             <div>
-                <h6>CAREER AT FINSWEET</h6>
+                <SimpleTag tag="CAREER AT FINSWEET"/>
                 <h2>We hired people who are Always Passionate about what they do</h2>
-                <p>Through True Rich Attended does no end it his mother since real had half every him case in packages enquire we up ecstatic unsatiable saw .</p>
+                <SimpleTextDark text="Through True Rich Attended does no end it his mother since real had half every him case in packages enquire we up ecstatic unsatiable saw ."/>
                 <img src={career_img} alt="" />
                 <div>
                     <p>See Our open positions </p>

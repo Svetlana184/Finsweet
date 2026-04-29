@@ -1,15 +1,13 @@
 .teamwork{
     width: 80%;
     margin-top: 8vh;
-    margin-bottom: 8vh;
-    height: 90vh;
+    height: auto;
     padding-left: 10%;
     padding-right: 10%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     .teamwork_list{
-        height: 70%;
         width: 100%;
         display: flex;
         flex-direction: row;
@@ -25,17 +23,15 @@
     }
     .teamwork_text{
         width: 45%;
-        height: 25%;
+        height: 30vh;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        margin-bottom: 64px;
         h6{
             font-size: 14px;
             text-transform: uppercase;
             letter-spacing: 3px;
-        }
-        h3{
-            font-size: 36px;
         }
     }
 }

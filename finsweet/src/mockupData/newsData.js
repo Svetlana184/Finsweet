@@ -2,6 +2,10 @@ export const news = [
     {
         id: 1,
         date: 'Jan 19, 2021',
+        short_desc: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The Maker is a decentralized. We aim to attain the greatest satisfaction for our clients',
+        id_author: 1,
+        name_author: 'Andrew Jonson',
+        pic_author: '',
         title: 'Today’s best design trends for digital products',
         decs: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The Maker is a decentralized. We aim to attain the greatest satisfaction for our clients',
         img: '',
@@ -11,6 +15,10 @@ export const news = [
     {
         id: 2,
         date: 'Jan 19, 2021',
+        short_desc: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The Maker is a decentralized. We aim to attain the greatest satisfaction for our clients',
+        id_author: 1,
+        name_author: 'Andrew Jonson',
+        pic_author: '',
         title: 'A practical guide to building a brand strategy',
         decs: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The Maker is a decentralized. We aim to attain the greatest satisfaction for our clients',
         img: '',

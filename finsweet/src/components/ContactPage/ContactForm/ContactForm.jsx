@@ -7,6 +7,8 @@ import facebook from "../../../assets/contactUs/facebook_white.svg";
 import twi from "../../../assets/contactUs/twi_white.svg";
 import inst from "../../../assets/contactUs/inst_white.svg";
 import linked from "../../../assets/contactUs/linked_white.svg"
+import SimpleTag from '../../common/SimpleTag/SimpleTag';
+import Title1 from '../../common/Title1/Title1';
 
 const ContactForm = () => {
   return (
@@ -14,8 +16,8 @@ const ContactForm = () => {
         <div className={styles.contact_left}>
             <div className={styles.contact_text}>
                 <div className={styles.contact_square}></div>
-                <h6>CONTACT US</h6>
-                <h3>Have a Question ? Let’s Get in Touch with us 👋</h3>
+                <SimpleTag tag="CONTACT US"/>
+                <Title1 name="Have a Question ? Let’s Get in Touch with us 👋"/>
                 <p>
                     Fill up the Form  and ou team will get back to within 24 hrs
                 </p>

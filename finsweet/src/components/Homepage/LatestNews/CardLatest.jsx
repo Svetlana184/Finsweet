@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import arrow from "../../../assets/icons/right_arrow_black.svg";
 import styles from "./CardLatest.module.scss"
+import SimpleLink from '../../common/SimpleLink/SimpleLink';
 
 const CardLatest = ({date, title, img, id}) => {
   const url = "blog/" + id;
@@ -10,12 +10,9 @@ const CardLatest = ({date, title, img, id}) => {
     <div className={styles.latest_card}>
         <img className={styles.card_pic} src={img} alt="" />
         <div>
-            <p>{date}</p>
+            <p className={styles.card_pic_p}>{date}</p>
             <h5>{title}</h5>
-            <Link to={url}>
-                <p>Read More</p>
-                <img src={arrow} alt="" />
-            </Link>
+            <SimpleLink path={url} text="Read more"/>
         </div>
     </div>
   )

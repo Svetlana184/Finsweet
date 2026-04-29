@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from "./CardExpertise.module.scss"
+import SimpleText from '../../common/SimpleText/SimpleText';
 
 const CardExpertise = ({icon, title, text}) => {
   return (
@@ -9,7 +10,7 @@ const CardExpertise = ({icon, title, text}) => {
         </div>
         <div>
             <h4>{title}</h4>
-            <p>{text}</p>
+            <SimpleText text={text}/>
         </div>
     </div>
   )

@@ -1,0 +1,53 @@
+@use '../../../styles/tokens' as t;
+
+.title_blog{
+    width: 80%;
+    margin-top: 8vh;
+    margin-bottom: 8vh;
+    height: 35vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    .title_blog_text{
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        p{
+            opacity: 87%;
+        }
+        .title_square{
+            width: 24px;
+            height: 24px;
+            background-color: t.$orange-color;
+        }
+        .title_author{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 12px;
+            img{
+                height: 32px;
+                width: 32px;
+                border-radius: 20px;
+            }
+            h6{
+                font-weight: 400;
+            }
+            p{
+                opacity: 60%;
+            }
+            div{
+                height: 16px;
+                width: 1px;
+                background-color: rgba(0, 0, 0, 0.2);
+            }
+        }
+            
+    }
+    .title_blog_shape{
+        width: 48px;
+    }
+}

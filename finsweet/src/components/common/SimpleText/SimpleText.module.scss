@@ -1,0 +1,11 @@
+.simple_text{
+    font-size: 16px;
+    color: rgba(93, 95, 109, 1);
+    font-weight: 400;
+}
+
+@media (max-width: 425px){
+    .simple_text{
+        font-size: 14px;
+    }
+}

@@ -3,6 +3,7 @@ import {privacyData} from "../../mockupData/privacyData";
 import shape_title from "../../assets/shapes/privacy_title.svg";
 import shape_text from "../../assets/shapes/privacy_text.svg";
 import styles from "./PrivacyPolicy.module.scss"
+import Title1 from "../common/Title1/Title1"
 
 const PrivacyPolicy = () => {
     const [data, setData] = useState(privacyData);
@@ -11,7 +12,7 @@ const PrivacyPolicy = () => {
         <div className={styles.privacy_title}>
             <div>
                 <div  className={styles.privacy_square}></div>
-                <h3>Privacy Policy</h3>
+                <Title1 name="Privacy Policy"/>
                 <p>Last Updated  on {privacyData.data}</p>
             </div>
             <img src={shape_title} alt="" />

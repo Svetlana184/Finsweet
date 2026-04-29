@@ -1,7 +1,8 @@
 import React from 'react'
 import {Link} from "react-router-dom"
-import arrow from "../../../assets/icons/right_arrow_black.svg"
 import styles from "./ServicesCard.module.scss"
+import SimpleText from '../../common/SimpleText/SimpleText'
+import SimpleLink from '../../common/SimpleLink/SimpleLink'
 
 
 const ServicesCard = ({icon, title, text, id}) => {
@@ -12,11 +13,8 @@ const ServicesCard = ({icon, title, text, id}) => {
       </div>
         
         <h4>{title}</h4>
-        <p>{text}</p>
-        <Link to="/">
-            Read more
-            <img src={arrow} alt="" />
-        </Link>
+        <SimpleText text={text}/>
+        <SimpleLink path="/services" text="Read more"/>
     </div>
   )
 }

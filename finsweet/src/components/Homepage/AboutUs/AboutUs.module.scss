@@ -2,21 +2,17 @@
     width: 80%;
     height: 120vh;
     margin-top: 8vh;
-    margin-bottom: 4vh;
+    margin-bottom: 8vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    h6{
-        letter-spacing: 3px;
-    }
     .about_us_title{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         height: 22%;
         h3{
-            font-size: 48px;
-            width: 55%;
+            width: 50%;
         }
         div{
             height: 80%;
@@ -24,11 +20,8 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            h4{
-                font-size: 36px;
-            }
-            p{
-                color: rgba(93, 95, 109, 1);
+            h3{
+                width: 100%;
             }
         }
     }
@@ -48,16 +41,6 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        div{
-            a{
-                color: rgba(68, 76, 252, 1);
-                text-decoration: none;
-            }
-            img{
-                width: 24px;
-                margin-left: 12px;
-            }
-        }
         ul{
             display: flex;
             flex-direction: row;
@@ -75,4 +58,52 @@
             }
         }
     }
+}
+
+@media (max-width: 425px){
+    .about_us{
+    height: 175vh;
+    .about_us_title{
+        flex-direction: column;
+        h3{
+            width: 100%;
+        }
+        div{
+            height: 60%;
+            width: 100%;
+        }
+    }
+    .about_us_images{
+        height: auto;
+        width: 100%;
+        flex-direction: column;
+        gap: 12px;
+        img{
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+        .about_us_image_last{
+            display: none;
+        }
+    }
+    .about_us_bottom{
+        align-items: flex-start;
+        flex-direction: column;
+        height: 15%;
+        ul{
+            flex-wrap: wrap;
+            width: 100%;
+            li{
+                width: 45%;
+                h5{
+                    font-size: 24px;
+                }
+                p{
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
 }

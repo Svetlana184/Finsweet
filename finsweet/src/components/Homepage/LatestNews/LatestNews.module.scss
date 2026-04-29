@@ -18,13 +18,25 @@
         height: 16px;
         background-color: rgba(102, 109, 255, 1);
     }
-    h3{
-        font-size: 48px;
-    }
     .list{
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
     }
+}
+
+@media (max-width: 425px){
+    .latest{
+        height: 100vh;
+        padding-top: 5vh;
+        padding-bottom: 5vh;
+        height: auto;
+        gap: 30px;
+        .list{
+            flex-direction: column;
+            width: 100%;
+            gap: 30px;
+        }
+}
 }

@@ -4,6 +4,7 @@ import facebook from "../../../assets/icons/facebook_black.svg"
 import twi from "../../../assets/icons/twitter_black.svg"
 import inst from "../../../assets/icons/inst_black.svg"
 import styles from "./MemberInfo.module.scss"
+import Title2 from '../../common/Title2/Title2'
 
 const MemberInfo = ({member}) => {
   return (

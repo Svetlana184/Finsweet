@@ -2,7 +2,7 @@
 
 .company_header{
     width: 80%;
-    height: 91vh;
+    height: 110vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -13,26 +13,36 @@
             width: 100%;
             display: flex;
             flex-direction: column;
+            align-items: center;
             .shape{
-                width: 346px;
+                height: 24px;
                 display: flex;
                 justify-self: flex-end;
                 align-self: flex-end;
             }
             div{
                 width: 100%;
-                 display: flex;
+                height: calc(100% - 24px);
+                display: flex;
                 flex-direction: row;
                 justify-content: space-between;
+                align-items: flex-start;
+                img{
+                    width: 30%;
+                    object-fit: contain;
+                }
             }
         }
     .company_header_top{
-        height: 30%;
+        height: 35%;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        img{
+        .shape_top{
             width: 48px;
+            display: flex;
+            justify-self: flex-end;
+            align-self: flex-start;
         }
         .company_text{
             width: 50%;
@@ -43,14 +53,6 @@
                 width: 28px;
                 height: 28px;
                 background-color: t.$orange-color;
-            }
-            h6{
-                text-transform: uppercase;
-                letter-spacing: 3px;
-                font-size: 14px;
-            }
-            h3{
-                font-size: 48px;
             }
         }
     }

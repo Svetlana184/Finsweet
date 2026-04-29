@@ -9,3 +9,48 @@ export const jobData = {
     time: 'FullTime',
     positions_avaliable: '5 Position Available.'
 }
+
+export const details = [
+    {
+        id: 1,
+        text: 'ddd'
+    },
+    {
+        id: 2,
+        text: 'ddd'
+    },
+    {
+        id: 3,
+        text: 'ddd'
+    }
+];
+
+export const requirements = [
+    {
+        id: 1,
+        text: 'eee'
+    },
+    {
+        id: 2,
+        text: 'eee'
+    },
+    {
+        id: 3,
+        text: 'eee'
+    }
+];
+
+export const responsibilities = [
+    {
+        id: 1,
+        text: 'rrr'
+    },
+    {
+        id: 2,
+        text: 'rrr'
+    },
+    {
+        id: 3,
+        text: 'rrr'
+    }
+]

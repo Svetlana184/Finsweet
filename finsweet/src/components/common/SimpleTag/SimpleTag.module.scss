@@ -1,0 +1,14 @@
+.tag{
+    font-size: 14px;
+    letter-spacing: 3px;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 1);
+    opacity: 87%;
+    text-transform: uppercase;
+}
+
+@media (max-width: 420px) {
+  .tag{
+    font-size: 10px;
+  }
+}

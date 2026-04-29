@@ -6,6 +6,8 @@ import Transform from '../components/Homepage/Transform/Transform'
 import AboutUs from '../components/Homepage/AboutUs/AboutUs'
 import Expertise from '../components/Homepage/Expertise/Expertise'
 import ServicesSection from "../components/Homepage/ServicesSection/ServicesSection"
+import Testimonials from '../components/Homepage/Testimonials/Testimonials'
+import { people, reviews } from '../mockupData/reviewData'
 
 
 const Home = () => {
@@ -16,6 +18,7 @@ const Home = () => {
      <Expertise/>
      <ServicesSection/>
      <ServiceProcess color='white'/>
+     <Testimonials people={people} reviews={reviews} stats="30+"/>
      <LatestNews/>
      <Subscribe/>
     </>

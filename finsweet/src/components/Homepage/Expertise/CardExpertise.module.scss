@@ -24,8 +24,14 @@
     }
     div{
         width: 80%;
-        p{
-            color: rgba(93, 95, 109, 1);
-        }
+    }
+}
+
+@media (max-width: 425px){
+    .card_exp{
+    width: calc(100% - 48px);
+    height: 138px;
+    padding: 24px;
+    flex-direction: column;
     }
 }

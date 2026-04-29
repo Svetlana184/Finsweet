@@ -7,7 +7,11 @@ import about_2 from "../../../assets/home/about_2.png"
 import about_3 from "../../../assets/home/about_3.png"
 import shape_vert from "../../../assets/shapes/about_shape.svg"
 import shape_hor from "../../../assets/shapes/about_vert.svg"
-import arrow from "../../../assets/icons/right_arrow_black.svg"
+import Title1 from '../../common/Title1/Title1';
+import Title2 from '../../common/Title2/Title2';
+import SimpleLink from "../../common/SimpleLink/SimpleLink"
+import SimpleText from '../../common/SimpleText/SimpleText';
+import SimpleTag from "../../common/SimpleTag/SimpleTag"
 
 const AboutUs = () => {
     const [data, setData] = useState(null);
@@ -19,26 +23,18 @@ const AboutUs = () => {
                 const stepsData = res.data;
                 setData(stepsData);
                 console.log(stepsData);
-                
-                // // Проверяем, что данные существуют и это массив
-                // if (stepsData && stepsData.length > 0 && stepsData[0].icon && stepsData[0].icon.data) {
-                //     // Преобразуем массив чисел в строку
-                //     const svgString = String.fromCharCode.apply(null, stepsData[0].icon.data);
-                //     const encoded = encodeURIComponent(svgString);
-                //     setSvgUrl(`data:image/svg+xml,${encoded}`);
-                // }
             })
             .catch(console.error);
     }, []);
 
     return (
         <section className={styles.about_us}>
-            <h6>ABOUT US</h6>
+            <SimpleTag tag="ABOUT US"/>
             <div className={styles.about_us_title}>
-                <h3>The company leads entire webdesign process from concept to delivery.</h3>
+                <Title1 name="The company leads entire webdesign process from concept to delivery." />
                 <div>
-                    <h4>The Era Of Technology.</h4>
-                    <p>Through True Rich Attended does no end it his mother since real had half every him case in packages enquire we up ecstatic unsatiable saw his giving Remain expense you position concluded. </p>
+                    <Title2 name="The Era Of Technology."/>
+                    <SimpleText text="Through True Rich Attended does no end it his mother since real had half every him case in packages enquire we up ecstatic unsatiable saw his giving Remain expense you position concluded. "/>
                 </div>
             </div>
             <div className={styles.about_us_images}>
@@ -58,10 +54,7 @@ const AboutUs = () => {
                         <p>{item.description}</p>
                     </li>)}     
                 </ul>
-                <div>
-                    <Link to="/company">Read about us</Link>
-                    <img src={arrow} alt="" />
-                </div>
+                <SimpleLink path="/company" text="Read about us"/>
             </div>
         </section>
     );

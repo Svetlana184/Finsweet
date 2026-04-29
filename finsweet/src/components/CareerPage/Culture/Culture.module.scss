@@ -3,6 +3,8 @@
     width: 80%;
     padding-left: 10%;
     padding-right: 10%;
+    margin-top: 8vh;
+    margin-bottom: 8vh;
     height: 90vh;
     display: flex;
     flex-direction: column;
@@ -21,13 +23,6 @@
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        h6{
-            font-size: 14px;
-            letter-spacing: 3px;
-        }
-        h3{
-            font-size: 36px;
-        }
         p{
             opacity: 60%;
         }

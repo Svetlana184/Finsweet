@@ -1,0 +1,42 @@
+@use '../../../styles/tokens' as t;
+
+.card_recent{
+    height: 248px;
+    width: calc(50% - 16px);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: t.$light-purple;
+    .card_recent_pic{
+        width: 40%;
+    }
+    .card_recent_text{
+        padding: 32px;
+        width: 50%;
+        height: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        h5{
+            font-size: 24px;
+        }
+        .card_recent_author{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 12px;
+            img{
+                height: 32px;
+                width: 32px;
+                border-radius: 20px;
+            }
+            h6{
+                font-weight: 400;
+            }
+            p{
+                opacity: 60%;
+            }
+        }
+    }
+}

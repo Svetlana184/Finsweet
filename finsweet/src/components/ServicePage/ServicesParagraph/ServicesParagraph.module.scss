@@ -1,8 +1,9 @@
 .img_par{
-    width: 515px;
-    height: 539px;
+    width: 40%;
+    height: 80%;
     display: flex;
     align-self: flex-start;
+    object-fit: contain;
 }
 
 .text_par{
@@ -14,11 +15,5 @@
     align-self: center;
     h6{
         font-size: 24px;
-    }
-    h3{
-        font-size: 36px;
-    }
-    p{
-        color: rgba(35, 37, 54, 1);
     }
 }

@@ -6,29 +6,37 @@
     flex-direction: row;
     .card_pic{
         height: 100%;
-        width: 296px;
+        width: 50%;
     }
     div{
-        width: auto;
+        width: 50%;
         height: calc(100% - 64px);
         padding: 32px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        p{
+        .card_pic_p{
             color: rgba(35, 37, 54, 1);
+            opacity: 60%;
             font-size: 14px;
         }
         h5{
             font-size: 24px;
         }
-        a{
-            display: flex;
-            text-decoration: none;
-            img{
-                width: 24px;
-                margin-left: 12px;
-            }
+    }
+}
+
+@media (max-width: 425px){
+    .latest_card{
+    width: 100%;
+    height: 170px;
+    div{
+        width: 50%;
+        height: calc(100% - 32px);
+        padding: 16px;
+        h5{
+            font-size: 16px;
         }
     }
+}
 }

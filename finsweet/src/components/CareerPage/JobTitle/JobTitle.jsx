@@ -1,17 +1,21 @@
 import SimpleButton from "../../common/SimpleButton/SimpleButton"
 import styles from "./JobTitle.module.scss"
+import shape from "../../../assets/shapes/process_shape.svg"
+import SimpleTag from "../../common/SimpleTag/SimpleTag";
+import Title2 from "../../common/Title2/Title2";
+import SimpleTextDark from "../../common/SimpleTextDark/SimpleTextDark";
 
 const JobTitle = ({job_description}) => {
     return (
         <section className={styles.job_title}>
             <div className={styles.job_left}>
-                <h6>{job_description.location}</h6>
-                <h3>{job_description.title}</h3>
-                <p>{job_description.description}</p>
+                <SimpleTag tag={job_description.location}/>
+                <Title2 name={job_description.title}/>
+                <SimpleTextDark text={job_description.description}/>
                 <SimpleButton name="Apply Now"/>
             </div>
             <div className={styles.job_right}>
-                <img src="" alt="" />
+                <img src={shape} alt="" />
                 <div>
                     <h4>
                         Job Description

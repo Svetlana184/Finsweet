@@ -1,3 +1,7 @@
+:root{
+  width: 1005;
+}
+
 #root {
   width: 100%;
   display: flex;
@@ -5,7 +9,10 @@
   align-items: center;
   padding: 0;
   margin: 0;
+  color: rgba(35, 37, 54, 1);
 }
+
+
 *,*{
   padding: 0;
   margin: 0;

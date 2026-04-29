@@ -1,7 +1,6 @@
 @use '../../../styles/tokens' as t;
 
 .subscribe{
-    margin-top: 4vh;
     margin-bottom: 4vh;
     width: 80%;
     height: 50vh;
@@ -13,6 +12,7 @@
     color: white;
     .sub_1{
         height: 80px;
+        display: flex;
         align-self: flex-start;
         justify-self: flex-start;
     }
@@ -22,15 +22,10 @@
         justify-self: flex-end;
     }
     .par{
+        display: flex;
+        flex-direction: column;
         align-self: center;
         width: 35%;
-        h5{
-            letter-spacing: 3px;
-        }
-        h3{
-            font-size: 36px;
-
-        }
     }
     form{
         align-self: center;
@@ -41,6 +36,36 @@
             height: calc(100% - 29px);
             padding: 29px;
             color: rgba(35, 37, 54, 1);
+        }
+    }
+}
+
+@media(min-width:320px) and (max-width:425px){
+    .subscribe{
+    height: 40vh;
+    flex-direction: column;
+    .sub_1{
+        height: 40px;
+    }
+    .sub_2{
+        display: none;
+    }
+    .par{
+        width: 80%;
+        align-items: center;
+        text-align: center;
+    }
+        form{
+            align-self: center;
+            width: 80%;
+            height: 10%;
+            margin-bottom: 30%;
+            input{
+                width: calc(100% - 20px);
+                height: calc(100% - 20px);
+                padding: 10px;
+                color: rgba(35, 37, 54, 1);
+            }
         }
     }
 }

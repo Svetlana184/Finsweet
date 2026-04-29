@@ -1,7 +1,6 @@
 import React from 'react'
 import TitleBlog from '../components/InnerBlogPage/TitleBlog/TitleBlog'
 import TextBlog from '../components/InnerBlogPage/TextBlog/TextBlog'
-import {blog_info} from "../mockupData/blogData"
 import Subscribe from '../components/common/Subscribe/Subscribe'
 import { useParams } from 'react-router-dom'
 import {news} from "../mockupData/newsData"

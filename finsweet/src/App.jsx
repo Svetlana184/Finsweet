@@ -55,6 +55,11 @@ function App() {
             <InnerBlogPage/>
           </>
         }/>
+        <Route path='/blog_preview/:id' element={
+          <>
+            <BlogPage/>
+          </>
+        }/>
         <Route path='/contact_us' element={
           <>
             <ContactUs/>
