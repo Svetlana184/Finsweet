@@ -5,6 +5,7 @@ import twi from "../../../assets/icons/twitter_black.svg"
 import inst from "../../../assets/icons/inst_black.svg"
 import styles from "./MemberInfo.module.scss"
 import Title2 from '../../common/Title2/Title2'
+import Title1 from '../../common/Title1/Title1'
 
 const MemberInfo = ({member}) => {
   return (

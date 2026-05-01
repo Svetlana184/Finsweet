@@ -5,7 +5,11 @@ import SimpleText from '../../common/SimpleText/SimpleText';
 
 const ServicesParagraph = ({title, text, tag, img, direction, color}) => {
   return (
-    <section style={{backgroundColor: color, display: 'flex', flexDirection: direction, alignItems: 'center', justifyContent: 'space-between', height: '65vh', paddingLeft: '10%', paddingRight: '10%'}}>
+    <section className={styles.services_par} 
+    style={{
+      backgroundColor: color, 
+      flexDirection: direction
+      }}>
         <img className={styles.img_par} src={img} alt="" />
         <div className={styles.text_par} >
             <h6>{tag}</h6>

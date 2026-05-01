@@ -28,3 +28,21 @@
         }
     }
 }
+
+@media (max-width: 425px){
+    .culture{
+        height: auto;
+        flex-direction: column;
+        gap: 32px;
+        .list{
+            width: 100%;
+            justify-content: center;
+        }
+        .text{
+            width: 100%;
+            height: auto;
+            align-items: center;
+            text-align: center;
+        }
+    }
+}

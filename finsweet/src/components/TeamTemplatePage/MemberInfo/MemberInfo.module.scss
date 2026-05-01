@@ -41,3 +41,72 @@
         }
     }
 }
+
+@media (max-width: 425px){
+        .member_info{
+        width: 80%;
+        img{
+            width: 150px;
+            height: 150px;
+        }
+        h3{
+            font-size: 20px;
+        }
+        h6{
+            font-size: 14px;
+            opacity: 70%;
+        }
+        p{
+            font-size: 14px;
+        }
+        ul{
+            width: 40%;
+        }
+    }
+}
+
+@media (min-width: 426px) and (max-width: 768px){
+        .member_info{
+        width: 80%;
+        img{
+            width: 200px;
+            height: 200px;
+        }
+        h3{
+            font-size: 24px;
+        }
+        h6{
+            font-size: 16px;
+            opacity: 70%;
+        }
+        p{
+            font-size: 16px;
+        }
+        ul{
+            width: 30%;
+        }
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px){
+    .member_info{
+        width: 80%;
+        img{
+            width: 250px;
+            height: 250px;
+        }
+        h3{
+            font-size: 28px;
+        }
+        h6{
+            font-size: 18px;
+            opacity: 70%;
+        }
+        p{
+            font-size: 18px;
+        }
+        ul{
+            width: 30%;
+        }
+    }
+}

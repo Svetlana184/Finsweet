@@ -1,7 +1,7 @@
 @use '../../../styles/tokens' as t;
 
 .service_process{
-    height: 100vh;
+    height: 130vh;
     background-color: t.$light-purple;
     width: 80%;
     padding-left: 10%;
@@ -18,7 +18,7 @@
     }
     .service_process_text{
         width: 100%;
-        height: 25%;
+        height: 40%;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -39,7 +39,6 @@
 @media (max-width: 425px){
     .service_process{
     height: 200vh;
-    margin-bottom: 8vh;
     .service_process_steps{
         width: 100%;
         height: 80%;
@@ -62,3 +61,28 @@
     }
 }
 }
+
+@media (min-width: 426px) and (max-width: 768px){
+    .service_process{
+    height: 200vh;
+    .service_process_steps{
+        width: 100%;
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+    }
+    .service_process_text{
+        width: 100%;
+        height: 15%;
+        flex-direction: column-reverse;
+        img{
+            width: 29px;
+            align-self: flex-end;
+            justify-self: flex-end;
+        }
+        div{
+            width: 100%;
+            height: 85%;
+        }
+    }
+}}

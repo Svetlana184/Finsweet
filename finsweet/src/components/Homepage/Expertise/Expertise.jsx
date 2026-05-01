@@ -1,13 +1,23 @@
 import React from 'react'
 import styles from "./Expertise.module.scss"
 import shape from "../../../assets/shapes/expertise.svg"
-import {steps} from "../../../mockupData/stepsData"
 import CardExpertise from './CardExpertise'
 import Title1 from "../../common/Title1/Title1"
 import SimpleTag from "../../common/SimpleTag/SimpleTag"
 import SimpleText from "../../common/SimpleText/SimpleText"
+import useSteps from '../../../hooks/getSteps'
 
 const Expertise = () => {
+
+    const { data, loading, error } = useSteps('expertise');
+
+    if (loading) {
+        return <div>Loading...</div>;
+    }
+
+    if (error) {
+        return <div>Error: {error}</div>;
+    }
 
   return (
     <section className={styles.expertise}>
@@ -20,7 +30,7 @@ const Expertise = () => {
             <div className={styles.expertise_square}>
             </div>
             <ul>
-                {steps.slice(0,3).map(item => <CardExpertise key={item.id} icon={item.icon} title={item.title} text={item.text}/>)}
+                {data.map(item => <CardExpertise key={item.id_step} icon={item.icon_file_path} title={item.title} text={item.description}/>)}
             </ul>
             <img className={styles.expertise_shape} src={shape} alt="" />
         </div>

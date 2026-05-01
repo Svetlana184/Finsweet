@@ -90,12 +90,13 @@
     .about_us_bottom{
         align-items: flex-start;
         flex-direction: column;
-        height: 15%;
+        height: 20%;
         ul{
             flex-wrap: wrap;
             width: 100%;
             li{
                 width: 45%;
+                height: 45%;
                 h5{
                     font-size: 24px;
                 }

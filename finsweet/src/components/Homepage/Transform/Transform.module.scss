@@ -72,6 +72,10 @@
         flex-wrap: wrap;
         li{
             width: 45%;
+            img{
+                object-fit: contain;
+                width: 100%;
+            }
             h6{
                 opacity: 60%;
                 font-weight: 500;
@@ -104,3 +108,9 @@
     }
 }
 }
+
+@media (min-width: 426px) and (max-width: 768px){
+    .transform{
+    height: 130vh;
+}
+}   

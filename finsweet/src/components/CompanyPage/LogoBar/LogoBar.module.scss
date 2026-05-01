@@ -11,3 +11,14 @@
         width: 15vw;
     }
 }
+
+@media (max-width: 425px){
+    .logo_bar{
+        flex-direction: column;
+        height: auto;
+        img{
+            width: 50vw;
+            margin-top: 4vh;
+        }
+    }
+}

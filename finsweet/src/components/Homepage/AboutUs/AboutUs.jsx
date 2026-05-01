@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import React from 'react';
 import {Link} from "react-router-dom"
 import styles from "./AboutUs.module.scss"
 import about_1 from "../../../assets/home/about_1.png"
@@ -12,20 +11,18 @@ import Title2 from '../../common/Title2/Title2';
 import SimpleLink from "../../common/SimpleLink/SimpleLink"
 import SimpleText from '../../common/SimpleText/SimpleText';
 import SimpleTag from "../../common/SimpleTag/SimpleTag"
+import useMetrics from '../../../hooks/getMetrics';
 
 const AboutUs = () => {
-    const [data, setData] = useState(null);
-    //const [svgUrl, setSvgUrl] = useState('');
+    const { data, loading, error } = useMetrics();
 
-    useEffect(() => {
-        axios.get('http://localhost:3000/api/metrics')
-            .then(res => {
-                const stepsData = res.data;
-                setData(stepsData);
-                console.log(stepsData);
-            })
-            .catch(console.error);
-    }, []);
+    if (loading) {
+        return <div>Loading...</div>;
+    }
+
+    if (error) {
+        return <div>Error: {error}</div>;
+    }
 
     return (
         <section className={styles.about_us}>
@@ -51,7 +48,7 @@ const AboutUs = () => {
                     <li key={item.id_metric}>
                         <h5>{item.value}</h5>
                         <img src={shape_hor} alt="" />
-                        <p>{item.description}</p>
+                        <p>{item.title}</p>
                     </li>)}     
                 </ul>
                 <SimpleLink path="/company" text="Read about us"/>

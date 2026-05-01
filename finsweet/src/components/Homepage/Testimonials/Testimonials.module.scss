@@ -57,3 +57,11 @@
     }
 }
 }
+
+@media (min-width: 426px) and (max-width: 768px){
+    .testimonials{
+    height: 100vh;
+    flex-direction: column;
+    padding-bottom: 5vh;
+    padding-top: 5vh;
+}}

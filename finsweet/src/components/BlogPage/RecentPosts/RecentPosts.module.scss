@@ -12,3 +12,14 @@
         gap: 32px;
     }
 }
+
+@media (max-width: 425px){
+    .recent_posts{
+        .recent_posts_cards{
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            gap: 32px;
+        }
+    }
+}

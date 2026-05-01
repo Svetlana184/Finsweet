@@ -1,51 +1,163 @@
-create table Metrics(
-	id_metric serial primary key,
-	value varchar(40),
-	description varchar(50)
-);
-
-create table Steps(
-	id_step serial primary key,
-	icon bytea,
-	title varchar(100),
-	description varchar(200),
-	order_step varchar(10),
-	type varchar(50) check (type in ('expertise', 'services', 'process', 'skills'))
-);
-
-create table Reviews(
-	id_review serial primary key,
-	text varchar(500),
-	img bytea,
-	name varchar(100),
-	info varchar(100),
-	company bytea
-);
-
-create table Services_Info(
-	id_services_info serial primary key,
-	pic bytea,
-	tag varchar(100),
-	title varchar(200),
-	text varchar(500)
-);
-
-create table Teammates(
-	id_temmates serial primary key,
-	pic bytea,
-	first_name varchar(100),
-	last_name varchar(100),
-	position varchar(50),
-	description varchar(300),
-	twi_link varchar(300),
-	facebook_linf varchar(300),
-	inst_link varchar(300)
+create table companies (
+	id_company serial primary key,
+	title varchar(100) not null,
+	
+	--картинка
+	pic_filename varchar(255),      
+    pic_original_name varchar(255), 
+    pic_file_path varchar(500),     
+    pic_mime_type varchar(100),              
+    pic_file_size integer   
 );
 
 create table users(
 	id_user serial primary key,
-	name_user varchar(100),
-	password varchar(300),
-	age_user int,
-	role varchar(200)
+	
+	--картинка
+	pic_filename varchar(255),      
+    pic_original_name varchar(255), 
+    pic_file_path varchar(500),     
+    pic_mime_type varchar(100),              
+    pic_file_size integer,   
+    
+    first_name varchar(50) not null,
+    second_name varchar(50),
+    last_name varchar(70) not null,
+    position varchar(50),
+    id_company int references companies(id_company),
+    twitter varchar(300),
+    inst varchar(300),
+    facebook varchar(300),
+    linked varchar(300),
+    short_desc varchar(300),
+    position_in_system varchar(30) check (position_in_system in ('client', 'admin', 'employee')),
+	password_hash varchar(255)
+);
+
+create table themes(
+	id_theme serial primary key,
+	title varchar(50) not null
+);
+
+create table metrics(
+	id_metric serial primary key,
+	value varchar(10) not null,
+	title varchar(50) not null
+);
+
+create table subscribers(
+	id_subscribe serial primary key,
+	email varchar(200) not null
+);
+
+create table jobs(
+	id_job serial primary key,
+	title varchar(100) not null,
+	id_company int references companies(id_company),
+	location varchar(100),
+	experience varchar(50),
+	department varchar(70),
+	working_hours varchar(70),
+	positions_avaliable int,
+	description varchar(500),
+	salary varchar(50)
+);
+
+create table candidates(
+	id_candidate serial primary key,
+	id_job int references jobs(id_job),
+	first_name varchar(50) not null,
+	last_name varchar(50) not null,
+	email varchar(200),
+	phone varchar(20),
+	message varchar(500),
+	agreement bool 
+);
+
+create table contacts(
+	id_contact serial primary key,
+	name varchar(50) not null,
+	email varchar(200) not null,
+	subject varchar(100),
+	message varchar(500) not null
+);
+
+create table services(
+	id_service serial primary key,
+	
+	--картинка
+	pic_filename varchar(255),      
+    pic_original_name varchar(255), 
+    pic_file_path varchar(500),     
+    pic_mime_type varchar(100),              
+    pic_file_size integer,   
+    
+    title varchar(200) not null,
+    tag varchar(50) not null,
+    text varchar(500) not null
+);
+
+create table details(
+	id_detail serial primary key,
+	order_detail int not null,
+	text varchar(200) not null,
+	type varchar(20) not null check(type in ('details', 'requirements', 'responsibilities')),
+	id_job int references jobs(id_job)
+);
+
+create table steps(
+	id_step serial primary key,
+	
+	--картинка
+	icon_filename varchar(255),      
+    icon_original_name varchar(255), 
+    icon_file_path varchar(500),     
+    icon_mime_type varchar(100),              
+    icon_file_size integer,  
+
+	emogi varchar(100),
+    
+    title varchar(50) not null,
+    description varchar(300),
+    path varchar(30),
+    order_step int,
+    type varchar(30),
+    is_first bool,
+    is_last bool
+);
+
+create table blogs(
+	id_blog serial primary key,
+	date date,
+	title varchar(200) not null,
+	
+	--картинка
+	pic_filename varchar(255),      
+    pic_original_name varchar(255), 
+    pic_file_path varchar(500),     
+    pic_mime_type varchar(100), 
+	
+    id_user int not null references users(id_user),
+    id_theme int not null references themes(id_theme),
+    description varchar(300) not null,
+    text text not null,
+    count_views int
+);
+
+CREATE TABLE views(
+    id_blog INT NOT NULL,
+    id_user INT NOT NULL,
+    
+    CONSTRAINT PK_Views PRIMARY KEY (id_blog, id_user),
+    CONSTRAINT FK_ViewsBlogs FOREIGN KEY (id_blog) 
+        REFERENCES blogs(id_blog) ON DELETE CASCADE,  -- Изменено на CASCADE
+    CONSTRAINT FK_ViewsUsers FOREIGN KEY (id_user) 
+        REFERENCES users(id_user) ON DELETE CASCADE   -- Изменено на CASCADE
+);
+
+create table reviews(
+	id_review serial primary key,
+	text text,
+	author int references users(id_user),
+	id_company int references companies(id_company)
 );

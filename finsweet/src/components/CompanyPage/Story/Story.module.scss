@@ -31,3 +31,19 @@
     }
 
 }
+
+@media (max-width: 425px) {
+    .story{
+        flex-direction: column;
+        height: auto;
+        .lists{
+            width: 100%;
+            height: 200px;
+        }
+        .story_text{
+            width: 100%;
+            height: auto;
+            margin-top: 4vh;
+        }
+    }
+}

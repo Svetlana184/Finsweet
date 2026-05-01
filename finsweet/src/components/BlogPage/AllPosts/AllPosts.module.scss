@@ -17,3 +17,11 @@
         gap: 32px;
     }
 }
+
+@media (max-width: 425px){
+    .all_posts{
+        .all_posts_cards{
+            flex-direction: column;
+        }
+    }
+}

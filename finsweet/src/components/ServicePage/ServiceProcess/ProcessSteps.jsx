@@ -7,7 +7,7 @@ const ProcessSteps = ({order, icon, title, text, isFirst, isLast}) => {
     <div style={{justifyContent: isLast ? 'flex-start' : 'space-between' }} className={styles.process_steps}>
         <img className={styles.shape_top} style={{display: isLast == true ? 'block' : 'none'}} src={shape} alt="" />
         <div>
-             <h6>{order}</h6>
+             <h6>0{order}</h6>
             <div>
                 <div className={styles.icon} >
                     <img src={icon} alt="" />

@@ -1,26 +1,692 @@
-insert into metrics (value, description) 
+insert into metrics (value, title) 
 values 
 ('1560+', 'Project Delivered'),
 ('100+', 'Professional'),
 ('950+', 'Happy Client'),
 ('10 yrs', 'Experience');
 
-insert into reviews (text, name, info)
-values 
-('Finsweet has been a wonderful partner to work with. I have been a customer now for the past few months now and I have had nothing but positive experiences!', 'Johnny Andro', 'Director, Company'),
-('Finsweet has been a wonderful partner to work with', 'John Doe', 'Manager, Company'),
-('I have been a customer now for the past few months now and I have had nothing but positive experiences!', 'Alice Doe', 'Manager, Company');
-
-insert into services_info (tag, title, text) 
+insert into companies (title, pic_filename, pic_original_name, pic_file_path, pic_mime_type)
 values
-('');
+('corp 1', 'logo_1_black.svg', 'logo_1_black.svg', 'uploads/images/companies/logo_1_black.svg', 'image/svg'),
+('corp 2', 'logo_2_black.svg', 'logo_2_black.svg', 'uploads/images/companies/logo_2_black.svg', 'image/svg'),
+('corp 3', 'logo_3_black.svg', 'logo_3_black.svg', 'uploads/images/companies/logo_3_black.svg', 'image/svg'),
+('corp 4', 'logo_4_black.svg', 'logo_4_black.svg', 'uploads/images/companies/logo_4_black.svg', 'image/svg'),
+('corp 5', 'logo_5_black.svg', 'logo_5_black.svg', 'uploads/images/companies/logo_5_black.svg', 'image/svg');
 
-CREATE OR REPLACE FUNCTION base64_to_bytea(base64_text TEXT)
-RETURNS BYTEA AS $$
-BEGIN
-    RETURN decode(base64_text, 'base64');
-END;
-$$ LANGUAGE plpgsql IMMUTABLE
+INSERT INTO services (
+    pic_filename, 
+    pic_original_name, 
+    pic_file_path, 
+    pic_mime_type, 
+    title, 
+    tag, 
+    text
+) VALUES 
+(
+    'service_1.png', 
+    'service_1.png', 
+    'uploads/images/services/service_1.png', 
+    'image/png', 
+    'Best in class tech support for your company. We become your tech backbone', 
+    'Technical Support', 
+    'Through True Rich Attended does no end it his mother since real had half every him case in packages enquire we up ecstatic unsatiable saw his giving Remain expense you position concluded. Through True Rich Attended does no end it his mother since real had half every.'
+),
+(
+    'service_2.png', 
+    'service_2.png', 
+    'uploads/images/services/service_2.png', 
+    'image/png', 
+    'Bring your ideas to reality with certified team of developers, working with latest technologies', 
+    'Development', 
+    'Through True Rich Attended does no end it his mother since real had half every him case in packages enquire we up ecstatic unsatiable saw his giving Remain expense you position concluded. Through True Rich Attended does no end it his mother since real had half every.'
+),
+(
+    'service_3.png', 
+    'service_3.png', 
+    'uploads/images/services/service_3.png', 
+    'image/png', 
+    'We help you deploy, manage and secure your application on leading web services', 
+    'AWS/Azure', 
+    'Through True Rich Attended does no end it his mother since real had half every him case in packages enquire we up ecstatic unsatiable saw his giving Remain expense you position concluded. Through True Rich Attended does no end it his mother since real had half every.'
+),
+(
+    'service_4.png', 
+    'service_4.png', 
+    'uploads/images/services/service_4.png', 
+    'image/png', 
+    'Get advice from world class professionals', 
+    'Consulting', 
+    'Through True Rich Attended does no end it his mother since real had half every him case in packages enquire we up ecstatic unsatiable saw his giving Remain expense you position concluded. Through True Rich Attended does no end it his mother since real had half every.'
+),
+(
+    'service_5.png', 
+    'service_5.png', 
+    'uploads/images/services/service_5.png', 
+    'image/png', 
+    'We want to get local identification in every corner of the world in this era of global citizenship.', 
+    'Information Technology', 
+    'Through True Rich Attended does no end it his mother since real had half every him case in packages enquire we up ecstatic unsatiable saw his giving Remain expense you position concluded. Through True Rich Attended does no end it his mother since real had half every.'
+);
 
-insert into steps(icon)
-values  (base64_to_bytea('PHN2ZyB3aWR0aD0iMjIiIGhlaWdodD0iMjciIHZpZXdCb3g9IjAgMCAyMiAyNyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik00Ljk2MzUzIDcuOTk1NjNIMy45OTY0NkMzLjk3NTQ0IDcuOTk1NjMgMy45NTU5OSA4LjAxNTE3IDMuOTU1OTkgOC4wMzU5NVYxMC43MzU3QzMuOTU1OTkgMTAuNzU2NiAzLjk3NTQ0IDEwLjc3NTkgMy45OTY0NiAxMC43NzU5SDQuOTYzNTNWNy45OTU2M1pNMTYuMzI2IDYuNzg2ODFIMTcuMjkyOUMxNy45ODEyIDYuNzg2ODEgMTguNTQyIDcuMzQ3NjUgMTguNTQyIDguMDM1OTVWMTAuNzM1NkMxOC41NDIgMTEuNDIzOCAxNy45ODEyIDExLjk4NDYgMTcuMjkyOSAxMS45ODQ2SDE1LjYyMjRDMTUuMTI0NyAxMi43NzU2IDE0LjQyMiAxMy40NjY2IDEzLjY2NjYgMTQuMDExMUMxMy42NjY2IDE0Ljk4MDUgMTQuMzY5IDE1Ljc3MjEgMTUuMzU4OSAxNS43NzIxQzE4LjI1MDEgMTUuNzcyMSAyMC41OTcgMTYuNTM0NCAyMC41OTcgMjAuMDQzMUMyMC41OTcgMjAuMzc2OSAyMC4zMjY0IDIwLjY0NzUgMTkuOTkyNSAyMC42NDc1QzE5LjY1ODkgMjAuNjQ3NSAxOS4zODgxIDIwLjM3NjkgMTkuMzg4MSAyMC4wNDMxQzE5LjM4ODEgMTcuMjI4NyAxNy41MjI0IDE2Ljk4MDggMTUuMzU4OSAxNi45ODA4QzE0Ljg3OTEgMTYuOTgwOCAxNC40MjYxIDE2Ljg2MzQgMTQuMDI2OSAxNi42NTZMMTAuNzk4NyAxOC45OTM1QzEwLjU5MjUgMTkuMTQ5NSAxMC4zMDA3IDE5LjE2MDQgMTAuMDgwNCAxOS4wMDA3TDcuMDA1MzcgMTYuNzc0QzYuNjcyODcgMTYuOTA3NCA2LjMxMDAxIDE2Ljk4MDggNS45MzA0NSAxNi45ODA4QzMuNzY3MTEgMTYuOTgwOCAxLjkwMTI4IDE3LjIyODcgMS45MDEyOCAyMC4wNDMxQzEuOTAxMjggMjAuMzc2OSAxLjYzMDU5IDIwLjY0NzUgMS4yOTY5MSAyMC42NDc1QzAuOTYzMTU0IDIwLjY0NzUgMC42OTIzODMgMjAuMzc2OSAwLjY5MjM4MyAyMC4wNDMxQzAuNjkyMzgzIDE2LjUzNDQgMy4wMzkzNSAxNS43NzIxIDUuOTMwNDUgMTUuNzcyMUM2LjgxOTM5IDE1Ljc3MjEgNy41NTMyNyAxNS4wNzg3IDcuNjE4MDYgMTQuMjA1NUM2Ljc1NjI1IDEzLjYzOTYgNS45NTA4NCAxMi44ODAzIDUuNDMxOTcgMTEuOTg0NkgzLjk5NjQ2QzMuMzA4MjQgMTEuOTg0NiAyLjc0NzQgMTEuNDIzOCAyLjc0NzQgMTAuNzM1NlY4LjAzNTk1QzIuNzQ3NCA3LjM0NzY1IDMuMzA4MTYgNi43ODY4MSAzLjk5NjQ2IDYuNzg2ODFINC45NjM1M1Y1LjkyNDU0QzQuOTYzNTMgMy4wMTg0NiA3LjMxMDgxIDAuNjIyMDcgMTAuMjEwNSAwLjYyMjA3SDExLjA3ODlDMTMuOTc4NCAwLjYyMjA3IDE2LjMyNiAzLjAxODc3IDE2LjMyNiA1LjkyNDY5VjYuNzg2ODFaTTE1LjExNzIgMTAuNzc2NFY2Ljg1ODQzQzEzLjQ3NjYgNy4wNjk0MyAxMS44MjcyIDYuNjA1ODUgMTAuNTQxNCA1LjU3NDc4QzkuMzQ3MzIgNi41Mjk1MyA3Ljc5NzM3IDcuMDM2MDkgNi4xNzIzNSA2Ljg4MTI1VjEwLjdDNi40MzUwNCAxMS41MzkyIDcuMDcyNTkgMTIuMjc5NyA3LjgwNzMzIDEyLjg1NjdDOC44MDkwNyAxMy42NDM1IDkuOTQ3MTQgMTQuMTA4MyAxMC41NzA0IDE0LjEwODNDMTEuMjAyMyAxNC4xMDgzIDEyLjQ4MjQgMTMuNTE5NSAxMy41NTYyIDEyLjU1ODNDMTMuNzU2OCAxMi4zNzkgMTMuOTQ4MSAxMi4xODcxIDE0LjEyNDYgMTEuOTg0OUgxMi4yNTYzQzEyLjA3MjcgMTIuMjI5NCAxMS43ODAxIDEyLjM4NzcgMTEuNDUwNSAxMi4zODc3QzEwLjg5NDEgMTIuMzg3NyAxMC40NDMzIDExLjkzNjYgMTAuNDQzMyAxMS4zODA1QzEwLjQ0MzMgMTAuODI0IDEwLjg5NDEgMTAuMzczIDExLjQ1MDUgMTAuMzczQzExLjc4MDEgMTAuMzczIDEyLjA3MjcgMTAuNTMxMyAxMi4yNTYzIDEwLjc3NkMxMy4wNTgxIDEwLjc3NTkgMTQuMzk0MiAxMC43NzY0IDE1LjExNzIgMTAuNzc2NFpNMTcuMjkyOSA3Ljk5NTYzSDE2LjMyNlYxMC43NzU5SDE3LjI5MjlDMTcuMzEzOSAxMC43NzU5IDE3LjMzMzMgMTAuNzU2NiAxNy4zMzMzIDEwLjczNTZWOC4wMzU5NUMxNy4zMzMzIDguMDE1MTcgMTcuMzEzOSA3Ljk5NTYzIDE3LjI5MjkgNy45OTU2M1pNMTUuMTA3NCA1LjY0MTg0QzE1LjAwMTkgNC4wODc0MiAxNC4wMzI1IDIuNzU3OCAxMi42NzMxIDIuMTYzMjRDMTIuNDU4IDMuMTMxNTYgMTIuMDE1OCA0LjAwMTI5IDExLjQxMTYgNC43MjM1NkMxMi40NjQ4IDUuNTE0OTMgMTMuNzk2OCA1Ljg0OTMxIDE1LjEwNzQgNS42NDE4NFpNMTEuNTA1OSAxLjg1MzhDMTEuMzY1NiAxLjgzODgxIDExLjIyMzIgMS44MzA5NyAxMS4wNzg5IDEuODMwOTdIMTAuMjEwNUM4LjA1NTEyIDEuODMwOTcgNi4zMTA1NiAzLjU0Mzc2IDYuMTgwMiA1LjY2OTYxQzguNjc5ODEgNS45NjAzIDEwLjk4NzggNC4yOTA5NyAxMS41MDU5IDEuODUzOFpNOC4wNTk3NSAxNi4wNDczTDEwLjQzNDYgMTcuNzY2OUwxMy4wNjk2IDE1Ljg1ODlDMTIuODEwMiAxNS41MjU2IDEyLjYyMTYgMTUuMTM0NyAxMi41MjY4IDE0LjcwOUMxMS43NjM4IDE1LjA5OTQgMTEuMDQ3NiAxNS4zMTY4IDEwLjU3MDQgMTUuMzE2OEMxMC4wOTg5IDE1LjMxNjggOS40Mzc1MiAxNS4xNDIgOC43MzQ4NyAxNC44MjI2QzguNjExNzIgMTUuMjg2MSA4LjM3NjMzIDE1LjcwNDkgOC4wNTk3NSAxNi4wNDczWiIgZmlsbD0iI0ZGQTE1NSIvPgo8cGF0aCBkPSJNMS42MjU0OSAyMi41MjE0QzYuMDM2ODkgMjYuMDA0IDEyLjA3MzUgMjguMzI1OCAxOS43MzU1IDIyLjUyMTQiIHN0cm9rZT0iIzQ0NENGQyIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8L3N2Zz4K'));
+INSERT INTO users (
+    pic_filename, 
+    pic_original_name, 
+    pic_file_path, 
+    pic_mime_type, 
+    first_name, 
+    last_name, 
+    position, 
+    id_company, 
+    twitter, 
+    inst, 
+    facebook, 
+    linked,
+    short_desc,
+    position_in_system
+) VALUES 
+(   
+    'team_1.png',
+    'team_1.png',
+    'uploads/images/users/team_1.png',
+    'image/png',
+    'John',
+    'Doe',
+    'Manager',
+    NULL,
+    'https://ru.pinterest.com/pin/952581758709200493/',
+    'https://ru.pinterest.com/pin/952581758709200493/',
+    'https://ru.pinterest.com/pin/952581758709200493/',
+    NULL,
+    'Through True Rich Attended does no end it his mother since real had half every him case in packages enquire we up ecstatic unsatiable.',
+    'employee'
+),
+(   
+    'team_2.png',
+    'team_2.png',
+    'uploads/images/users/team_2.png',
+    'image/png',
+    'Mike',
+    'Doe',
+    'Manager',
+    NULL,
+    NULL,
+    'https://ru.pinterest.com/pin/952581758709200493/',
+    'https://ru.pinterest.com/pin/952581758709200493/',
+    NULL,
+    'Through True Rich Attended does no end it his mother since real had half every him case in packages enquire we up ecstatic unsatiable.',
+    'employee'
+),
+(   
+    'team_3.png',
+    'team_3.png',
+    'uploads/images/users/team_3.png',
+    'image/png',
+    'Ivan',
+    'Doe',
+    'Manager',
+    NULL,
+    'https://ru.pinterest.com/pin/952581758709200493/',
+    'https://ru.pinterest.com/pin/952581758709200493/',
+    NULL,
+    NULL,
+    'Through True Rich Attended does no end it his mother since real had half every him case in packages enquire we up ecstatic unsatiable.',
+    'employee'
+),
+(   
+    'team_4.png',
+    'team_4.png',
+    'uploads/images/users/team_4.png',
+    'image/png',
+    'John',
+    'Carpenter',
+    'Developer',
+    NULL,
+    'https://ru.pinterest.com/pin/952581758709200493/',
+    'https://ru.pinterest.com/pin/952581758709200493/',
+    'https://ru.pinterest.com/pin/952581758709200493/',
+    NULL,
+    'Through True Rich Attended does no end it his mother since real had half every him case in packages enquire we up ecstatic unsatiable.',
+    'employee'
+),
+(   
+    'team_5.png',
+    'team_5.png',
+    'uploads/images/users/team_5.png',
+    'image/png',
+    'Mike',
+    'Carpenter',
+    'Manager',
+    NULL,
+    'https://ru.pinterest.com/pin/952581758709200493/',
+    'https://ru.pinterest.com/pin/952581758709200493/',
+    'https://ru.pinterest.com/pin/952581758709200493/',
+    NULL,
+    'Through True Rich Attended does no end it his mother since real had half every him case in packages enquire we up ecstatic unsatiable.',
+    'employee'
+),
+(   
+    'team_6.png',
+    'team_6.png',
+    'uploads/images/users/team_6.png',
+    'image/png',
+    'Robert',
+    'Doe',
+    'Designer',
+    NULL,
+    'https://ru.pinterest.com/pin/952581758709200493/',
+    'https://ru.pinterest.com/pin/952581758709200493/',
+    'https://ru.pinterest.com/pin/952581758709200493/',
+    NULL,
+    'Through True Rich Attended does no end it his mother since real had half every him case in packages enquire we up ecstatic unsatiable.',
+    'employee'
+),
+(   
+    'team_7.png',
+    'team_7.png',
+    'uploads/images/users/team_7.png',
+    'image/png',
+    'John',
+    'Camp',
+    'CEO',
+    NULL,
+    'https://ru.pinterest.com/pin/952581758709200493/',
+    'https://ru.pinterest.com/pin/952581758709200493/',
+    'https://ru.pinterest.com/pin/952581758709200493/',
+    NULL,
+    'Through True Rich Attended does no end it his mother since real had half every him case in packages enquire we up ecstatic unsatiable.',
+    'employee'
+),
+(   
+    'team_8.png',
+    'team_8.png',
+    'uploads/images/users/team_8.png',  -- было team_1.png, исправлено на team_8.png
+    'image/png',
+    'Tim',
+    'Doe',
+    'Manager',
+    NULL,
+    'https://ru.pinterest.com/pin/952581758709200493/',
+    'https://ru.pinterest.com/pin/952581758709200493/',
+    'https://ru.pinterest.com/pin/952581758709200493/',
+    NULL,
+    'Through True Rich Attended does no end it his mother since real had half every him case in packages enquire we up ecstatic unsatiable.',
+    'employee'
+),
+(   
+    'default_user.jpg',
+    'default_user.jpg',
+    'uploads/images/users/default_user.jpg',
+    'image/jpeg',  -- было image/png, исправлено на image/jpeg
+    'Rose',
+    'Doe',
+    'Manager',
+    NULL,
+    'https://ru.pinterest.com/pin/952581758709200493/',
+    'https://ru.pinterest.com/pin/952581758709200493/',
+    'https://ru.pinterest.com/pin/952581758709200493/',
+    NULL,
+    'Through True Rich Attended does no end it his mother since real had half every him case in packages enquire we up ecstatic unsatiable.',
+    'admin'
+);
+
+insert into themes(title) values ('design'), ('development'), ('hr'), ('technical support');
+
+insert into jobs(title, id_company, location, experience, department, working_hours, positions_avaliable, description, salary)
+values
+('Full Stack Developer', null, 'Bengaluru', 'No equity', 'Engineering', 'Full Time', 1, 'Through True Rich Attended does no end it his mother since real had half every him case in packages.', '$10K - $18K'),
+('Testing Engineer', null, 'Remote', '4 to 5 Yrs Exp', 'Engineering', 'Full Time', 1, 'Through True Rich Attended does no end it his mother since real had half every him case in packages.', '$08K - $10K'),
+('Hr Manager', null, 'Mumbai', 'No equity', 'Engineering', 'Full Time', 1, 'Through True Rich Attended does no end it his mother since real had half every him case in packages.', '$08K - $10K'),
+('Product Designer', null, 'Mumbai', 'No equity', 'Engineering', 'Full Time', 1, 'Through True Rich Attended does no end it his mother since real had half every him case in packages.', '$08K - $10K'),
+('Wordpress Developer', null, 'Mumbai', '4 to 5 Yrs Exp', 'Engineering', 'Full Time', 1, 'Through True Rich Attended does no end it his mother since real had half every him case in packages.', '$08K - $10K'),
+('Jr. QA Tester', null, 'California, USA', 'No equity', 'Engineering', 'Full Time', 1, 'Through True Rich Attended does no end it his mother since real had half every him case in packages.', '$08K - $10K'),
+('Sr. UX Designer', null, 'California, USA', '4 to 5 Yrs Exp', 'Engineering', 'Full Time', 1, 'Through True Rich Attended does no end it his mother since real had half every him case in packages.', '$08K - $10K'),
+('Social Media Manager', null, 'Kolkata, India', 'No equity', 'Engineering', 'Full Time', 1, 'Through True Rich Attended does no end it his mother since real had half every him case in packages.', '$08K - $10K'),
+('Golang Developer', null, 'Mumbai', 'No equity', 'Engineering', 'Full Time', 1, 'Through True Rich Attended does no end it his mother since real had half every him case in packages.', '$08K - $10K');
+
+
+insert into details(order_detail, text, type, id_job)
+values
+(1, 
+'Create and edit video content for multi-platform use and distribution for social media channels (Facebook, Youtube, Instagram, Snapchat, IGTV, Facebook Stories and Instagram Stories).',
+'details', 1),
+(2, 
+'Create and edit video content for multi-platform use and distribution for social media channels (Facebook, Youtube, Instagram, Snapchat, IGTV, Facebook Stories and Instagram Stories).',
+'details', 2),
+(3, 
+'Create and edit video content for multi-platform use and distribution for social media channels (Facebook, Youtube, Instagram, Snapchat, IGTV, Facebook Stories and Instagram Stories).',
+'details', 3),
+(4, 
+'Create and edit video content for multi-platform use and distribution for social media channels (Facebook, Youtube, Instagram, Snapchat, IGTV, Facebook Stories and Instagram Stories).',
+'details', 4),
+(1, 
+'Create and edit video content for multi-platform use and distribution for social media channels (Facebook, Youtube, Instagram, Snapchat, IGTV, Facebook Stories and Instagram Stories).',
+'requirements', 1),
+(2, 
+'Create and edit video content for multi-platform use and distribution for social media channels (Facebook, Youtube, Instagram, Snapchat, IGTV, Facebook Stories and Instagram Stories).',
+'requirements', 2),
+(3, 
+'Create and edit video content for multi-platform use and distribution for social media channels (Facebook, Youtube, Instagram, Snapchat, IGTV, Facebook Stories and Instagram Stories).',
+'requirements', 3),
+(4, 
+'Create and edit video content for multi-platform use and distribution for social media channels (Facebook, Youtube, Instagram, Snapchat, IGTV, Facebook Stories and Instagram Stories).',
+'requirements', 4),
+(5, 
+'Create and edit video content for multi-platform use and distribution for social media channels (Facebook, Youtube, Instagram, Snapchat, IGTV, Facebook Stories and Instagram Stories).',
+'requirements', 5),
+(1, 
+'Create and edit video content for multi-platform use and distribution for social media channels (Facebook, Youtube, Instagram, Snapchat, IGTV, Facebook Stories and Instagram Stories).',
+'responsibilities', 1),
+(2, 
+'Create and edit video content for multi-platform use and distribution for social media channels (Facebook, Youtube, Instagram, Snapchat, IGTV, Facebook Stories and Instagram Stories).',
+'responsibilities', 2),
+(3, 
+'Create and edit video content for multi-platform use and distribution for social media channels (Facebook, Youtube, Instagram, Snapchat, IGTV, Facebook Stories and Instagram Stories).',
+'responsibilities', 3);
+
+INSERT INTO steps (
+    icon_filename, 
+    icon_original_name, 
+    icon_file_path, 
+    icon_mime_type, 
+    title, 
+    description, 
+    order_step, 
+    type, 
+    is_first, 
+    is_last
+) VALUES
+-- expertise (оранжевые иконки)
+(
+    'shuttle.svg', 
+    'shuttle.svg', 
+    'uploads/icons/orange/shuttle.svg', 
+    'image/svg+xml',  -- исправлен mime-type
+    'On Time Delivery', 
+    'Through True Rich Attended does no end it his mother since real had half every him.', 
+    NULL, 
+    'expertise', 
+    NULL, 
+    NULL
+),
+(
+    'settings.svg', 
+    'settings.svg', 
+    'uploads/icons/orange/settings.svg', 
+    'image/svg+xml',  -- исправлен mime-type
+    'Best Quality', 
+    'Through True Rich Attended does no end it his mother since real had half every him.', 
+    NULL, 
+    'expertise', 
+    NULL, 
+    NULL
+),
+(
+    'man.svg', 
+    'man.svg', 
+    'uploads/icons/orange/man.svg', 
+    'image/svg+xml',  -- исправлен mime-type
+    'On Time Delivery',  -- возможно, нужно другое название (повторяется)
+    'Through True Rich Attended does no end it his mother since real had half every him.', 
+    NULL, 
+    'expertise', 
+    NULL, 
+    NULL
+),
+-- services (оранжевые иконки)
+(
+    'terminal.svg', 
+    'terminal.svg', 
+    'uploads/icons/orange/terminal.svg', 
+    'image/svg+xml',  -- исправлен mime-type
+    'Technical support', 
+    'We aim to attain the greatest satisfaction for our clients and be one of the prominent names when it comes to world-class service', 
+    NULL, 
+    'services', 
+    NULL, 
+    NULL
+),
+(
+    'headphones.svg', 
+    'headphones.svg', 
+    'uploads/icons/orange/headphones.svg', 
+    'image/svg+xml',  -- исправлен mime-type
+    'Best Quality', 
+    'We aim to attain the greatest satisfaction for our clients and be one of the prominent names when it comes to world-class service', 
+    NULL, 
+    'services', 
+    NULL, 
+    NULL
+),
+(
+    'terminal.svg',  -- дубликат иконки (может быть проблемой)
+    'terminal.svg', 
+    'uploads/icons/orange/terminal.svg', 
+    'image/svg+xml',  -- исправлен mime-type
+    'Development', 
+    'We aim to attain the greatest satisfaction for our clients and be one of the prominent names when it comes to world-class service', 
+    NULL, 
+    'services', 
+    NULL, 
+    NULL
+),
+-- process (черные иконки)
+(
+    'lamp.svg', 
+    'lamp.svg', 
+    'uploads/icons/black/lamp.svg', 
+    'image/svg+xml',  -- исправлен mime-type
+    'Discover', 
+    'We aim to attain the greatest satisfaction for our clients and be one of the prominent.', 
+    1,  -- order_step как число, а не строка
+    'process', 
+    TRUE,  -- булево значение, а не строка
+    NULL
+),
+(
+    'note.svg', 
+    'note.svg', 
+    'uploads/icons/black/note.svg', 
+    'image/svg+xml',  -- исправлен mime-type
+    'Designing', 
+    'We aim to attain the greatest satisfaction for our clients and be one of the prominent.', 
+    2,  -- order_step как число
+    'process', 
+    NULL, 
+    NULL
+),
+(
+    'terminal.svg', 
+    'terminal.svg', 
+    'uploads/icons/black/terminal.svg', 
+    'image/svg+xml',  -- исправлен mime-type
+    'Development', 
+    'We aim to attain the greatest satisfaction for our clients and be one of the prominent.', 
+    3,  -- order_step как число
+    'process', 
+    NULL, 
+    NULL
+),
+(
+    'idea.svg', 
+    'idea.svg', 
+    'uploads/icons/black/idea.svg', 
+    'image/svg+xml',  -- исправлен mime-type
+    'Testing', 
+    'We aim to attain the greatest satisfaction for our clients and be one of the prominent.', 
+    4,  -- order_step как число
+    'process', 
+    NULL, 
+    NULL
+),
+(
+    'rocket.svg', 
+    'rocket.svg', 
+    'uploads/icons/black/rocket.svg', 
+    'image/svg+xml',  -- исправлен mime-type
+    'Deployment', 
+    'We aim to attain the greatest satisfaction for our clients and be one of the prominent.', 
+    5,  -- order_step как число
+    'process', 
+    NULL, 
+    NULL
+),
+(
+    'key.svg', 
+    'key.svg', 
+    'uploads/icons/black/key.svg', 
+    'image/svg+xml',  -- исправлен mime-type
+    'Maintenance', 
+    'We aim to attain the greatest satisfaction for our clients and be one of the prominent.', 
+    6,  -- order_step как число
+    'process', 
+    NULL, 
+    TRUE  -- булево значение
+);
+
+INSERT INTO steps (
+    title, 
+    description, 
+    order_step, 
+    type, 
+    emogi
+) VALUES
+(
+    'Covid-19 insurance',
+    'Through True Rich Attended does no end it his mother since real had halfdoes no end it',
+    null,
+    'culture',
+    '😷'
+),
+(
+    'Flexible working time',
+    'Through True Rich Attended does no end it his mother since real had halfdoes no end it',
+    null,
+    'culture',
+    '⏱'
+),
+(
+    'Work from home',
+    'Through True Rich Attended does no end it his mother since real had halfdoes no end it',
+    null,
+    'culture',
+    '🏡'
+),
+(
+    'Annual retreats',
+    'Through True Rich Attended does no end it his mother since real had halfdoes no end it',
+    null,
+    'culture',
+    '🎉'
+),
+(
+    'Learning stipend',
+    'Through True Rich Attended does no end it his mother since real had halfdoes no end it',
+    null,
+    'culture',
+    '💰'
+),
+(
+    'Gym membership',
+    'Through True Rich Attended does no end it his mother since real had halfdoes no end it',
+    null,
+    'culture',
+    '💪'
+);
+
+
+
+insert into blogs(date, title, pic_filename, pic_original_name, pic_file_path, pic_mime_type, id_user, id_theme, description, text)
+values
+('2023-04-12', 
+'Today’s best design trends for digital products', 
+'blog_1.png', 'blog_1.png', 'uploads/images/blogs/blog_1.png', 'image/png', 1, 1, 
+'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The Maker is a decentralized. We aim to attain the.',
+'<h3>Transform Your Idea Into Reality with Ether a Leading Digital Agency</h3>
+<p>Writing UX copies can be a little frustrating and confusing, and sometimes we are unsure about how to get the right word. To crack the code for the UX copies, we at Zeta Design wanted to build a Figma plugin for the larger design community. The plugin is called the Ghost UXWriter and has a set of UX copies cataloged and categorized with a voice and tone variation ranging from plain, casual to playful. The intention to build this Figma plugin originated from our Medium blog post, ‘Designing voice and tone for error messages.</p>
+<p>Writing UX copies can be a little frustrating and confusing, and sometimes we are unsure about how to get the right word. To crack the code for the UX copies, we at Zeta Design wanted to build a Figma plugin for the larger design community. The plugin is called the Ghost UXWriter and has a set of UX copies cataloged.</p>
+<p>Writing UX copies can be a little frustrating and confusing, and sometimes we are unsure about how to get the right word. To crack the code for the UX copies, we at Zeta Design wanted to build a Figma plugin for the larger design community. The plugin is called the Ghost UXWriter and has a set of UX copies cataloged.</p>
+<p>Writing UX copies can be a little frustrating and confusing, and sometimes we are unsure about how to get the right word. To crack the code for the UX copies, we at Zeta Design wanted to build a Figma plugin for the larger design community. The plugin is called the Ghost UXWriter and has a set of UX copies cataloged.</p>
+<h4>Transform Your Idea Into Reality with Ether a Leading Digital Agency</h4>
+<p>Step 1: Download the plugin from Figma community, search Ghost UXWriter
+Step 2: Open the plugin on your artboard
+Step 3: Search for your copy or look through the different categories of the copies
+Step 4: Select the type of error you are looking for. You will get three different copies for each error
+Step 5: Tap on the cards to insert text in your frames
+And you are all geared up to make your UX copies more fun and exciting 😎</p>'),
+('2023-06-17', 
+'A practical guide to building a brand strategy', 
+'blog_2.png', 'blog_2.png', 'uploads/images/blogs/blog_2.png', 'image/png', 1, 1, 
+'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The Maker is a decentralized. We aim to attain the.',
+'<h3>Transform Your Idea Into Reality with Ether a Leading Digital Agency</h3>
+<p>Writing UX copies can be a little frustrating and confusing, and sometimes we are unsure about how to get the right word. To crack the code for the UX copies, we at Zeta Design wanted to build a Figma plugin for the larger design community. The plugin is called the Ghost UXWriter and has a set of UX copies cataloged and categorized with a voice and tone variation ranging from plain, casual to playful. The intention to build this Figma plugin originated from our Medium blog post, ‘Designing voice and tone for error messages.</p>
+<p>Writing UX copies can be a little frustrating and confusing, and sometimes we are unsure about how to get the right word. To crack the code for the UX copies, we at Zeta Design wanted to build a Figma plugin for the larger design community. The plugin is called the Ghost UXWriter and has a set of UX copies cataloged.</p>
+<p>Writing UX copies can be a little frustrating and confusing, and sometimes we are unsure about how to get the right word. To crack the code for the UX copies, we at Zeta Design wanted to build a Figma plugin for the larger design community. The plugin is called the Ghost UXWriter and has a set of UX copies cataloged.</p>
+<p>Writing UX copies can be a little frustrating and confusing, and sometimes we are unsure about how to get the right word. To crack the code for the UX copies, we at Zeta Design wanted to build a Figma plugin for the larger design community. The plugin is called the Ghost UXWriter and has a set of UX copies cataloged.</p>
+<h4>Transform Your Idea Into Reality with Ether a Leading Digital Agency</h4>
+<p>Step 1: Download the plugin from Figma community, search Ghost UXWriter
+Step 2: Open the plugin on your artboard
+Step 3: Search for your copy or look through the different categories of the copies
+Step 4: Select the type of error you are looking for. You will get three different copies for each error
+Step 5: Tap on the cards to insert text in your frames
+And you are all geared up to make your UX copies more fun and exciting 😎</p>
+'),
+('2023-10-1', 
+'Today’s best design trends for digital products', 
+'blog_3.png', 'blog_3.png', 'uploads/images/blogs/blog_3.png', 'image/png', 1, 2, 
+'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The Maker is a decentralized. We aim to attain the.',
+'<h3>Transform Your Idea Into Reality with Ether a Leading Digital Agency</h3>
+<p>Writing UX copies can be a little frustrating and confusing, and sometimes we are unsure about how to get the right word. To crack the code for the UX copies, we at Zeta Design wanted to build a Figma plugin for the larger design community. The plugin is called the Ghost UXWriter and has a set of UX copies cataloged and categorized with a voice and tone variation ranging from plain, casual to playful. The intention to build this Figma plugin originated from our Medium blog post, ‘Designing voice and tone for error messages.</p>
+<p>Writing UX copies can be a little frustrating and confusing, and sometimes we are unsure about how to get the right word. To crack the code for the UX copies, we at Zeta Design wanted to build a Figma plugin for the larger design community. The plugin is called the Ghost UXWriter and has a set of UX copies cataloged.</p>
+<p>Writing UX copies can be a little frustrating and confusing, and sometimes we are unsure about how to get the right word. To crack the code for the UX copies, we at Zeta Design wanted to build a Figma plugin for the larger design community. The plugin is called the Ghost UXWriter and has a set of UX copies cataloged.</p>
+<p>Writing UX copies can be a little frustrating and confusing, and sometimes we are unsure about how to get the right word. To crack the code for the UX copies, we at Zeta Design wanted to build a Figma plugin for the larger design community. The plugin is called the Ghost UXWriter and has a set of UX copies cataloged.</p>
+<h4>Transform Your Idea Into Reality with Ether a Leading Digital Agency</h4>
+<p>Step 1: Download the plugin from Figma community, search Ghost UXWriter
+Step 2: Open the plugin on your artboard
+Step 3: Search for your copy or look through the different categories of the copies
+Step 4: Select the type of error you are looking for. You will get three different copies for each error
+Step 5: Tap on the cards to insert text in your frames
+And you are all geared up to make your UX copies more fun and exciting 😎</p>
+'),
+('2024-04-12', 
+'Today’s best design trends for digital products', 
+'blog_4.png', 'blog_4.png', 'uploads/images/blogs/blog_4.png', 'image/png', 1, 2, 
+'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The Maker is a decentralized. We aim to attain the.',
+'<h3>Transform Your Idea Into Reality with Ether a Leading Digital Agency</h3>
+<p>Writing UX copies can be a little frustrating and confusing, and sometimes we are unsure about how to get the right word. To crack the code for the UX copies, we at Zeta Design wanted to build a Figma plugin for the larger design community. The plugin is called the Ghost UXWriter and has a set of UX copies cataloged and categorized with a voice and tone variation ranging from plain, casual to playful. The intention to build this Figma plugin originated from our Medium blog post, ‘Designing voice and tone for error messages.</p>
+<p>Writing UX copies can be a little frustrating and confusing, and sometimes we are unsure about how to get the right word. To crack the code for the UX copies, we at Zeta Design wanted to build a Figma plugin for the larger design community. The plugin is called the Ghost UXWriter and has a set of UX copies cataloged.</p>
+<p>Writing UX copies can be a little frustrating and confusing, and sometimes we are unsure about how to get the right word. To crack the code for the UX copies, we at Zeta Design wanted to build a Figma plugin for the larger design community. The plugin is called the Ghost UXWriter and has a set of UX copies cataloged.</p>
+<p>Writing UX copies can be a little frustrating and confusing, and sometimes we are unsure about how to get the right word. To crack the code for the UX copies, we at Zeta Design wanted to build a Figma plugin for the larger design community. The plugin is called the Ghost UXWriter and has a set of UX copies cataloged.</p>
+<h4>Transform Your Idea Into Reality with Ether a Leading Digital Agency</h4>
+<p>Step 1: Download the plugin from Figma community, search Ghost UXWriter
+Step 2: Open the plugin on your artboard
+Step 3: Search for your copy or look through the different categories of the copies
+Step 4: Select the type of error you are looking for. You will get three different copies for each error
+Step 5: Tap on the cards to insert text in your frames
+And you are all geared up to make your UX copies more fun and exciting 😎</p>
+'),
+('2025-05-12', 
+'Today’s best design trends for digital products', 
+'blog_5.png', 'blog_5.png', 'uploads/images/blogs/blog_5.png', 'image/png', 1, 2, 
+'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The Maker is a decentralized. We aim to attain the.',
+'<h3>Transform Your Idea Into Reality with Ether a Leading Digital Agency</h3>
+<p>Writing UX copies can be a little frustrating and confusing, and sometimes we are unsure about how to get the right word. To crack the code for the UX copies, we at Zeta Design wanted to build a Figma plugin for the larger design community. The plugin is called the Ghost UXWriter and has a set of UX copies cataloged and categorized with a voice and tone variation ranging from plain, casual to playful. The intention to build this Figma plugin originated from our Medium blog post, ‘Designing voice and tone for error messages.</p>
+<p>Writing UX copies can be a little frustrating and confusing, and sometimes we are unsure about how to get the right word. To crack the code for the UX copies, we at Zeta Design wanted to build a Figma plugin for the larger design community. The plugin is called the Ghost UXWriter and has a set of UX copies cataloged.</p>
+<p>Writing UX copies can be a little frustrating and confusing, and sometimes we are unsure about how to get the right word. To crack the code for the UX copies, we at Zeta Design wanted to build a Figma plugin for the larger design community. The plugin is called the Ghost UXWriter and has a set of UX copies cataloged.</p>
+<p>Writing UX copies can be a little frustrating and confusing, and sometimes we are unsure about how to get the right word. To crack the code for the UX copies, we at Zeta Design wanted to build a Figma plugin for the larger design community. The plugin is called the Ghost UXWriter and has a set of UX copies cataloged.</p>
+<h4>Transform Your Idea Into Reality with Ether a Leading Digital Agency</h4>
+<p>Step 1: Download the plugin from Figma community, search Ghost UXWriter
+Step 2: Open the plugin on your artboard
+Step 3: Search for your copy or look through the different categories of the copies
+Step 4: Select the type of error you are looking for. You will get three different copies for each error
+Step 5: Tap on the cards to insert text in your frames
+And you are all geared up to make your UX copies more fun and exciting 😎</p>
+'),
+('2025-07-12', 
+'Today’s best design trends for digital products', 
+'blog_6.png', 'blog_6.png', 'uploads/images/blogs/blog_6.png', 'image/png', 1, 2, 
+'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The Maker is a decentralized. We aim to attain the.',
+'<h3>Transform Your Idea Into Reality with Ether a Leading Digital Agency</h3>
+<p>Writing UX copies can be a little frustrating and confusing, and sometimes we are unsure about how to get the right word. To crack the code for the UX copies, we at Zeta Design wanted to build a Figma plugin for the larger design community. The plugin is called the Ghost UXWriter and has a set of UX copies cataloged and categorized with a voice and tone variation ranging from plain, casual to playful. The intention to build this Figma plugin originated from our Medium blog post, ‘Designing voice and tone for error messages.</p>
+<p>Writing UX copies can be a little frustrating and confusing, and sometimes we are unsure about how to get the right word. To crack the code for the UX copies, we at Zeta Design wanted to build a Figma plugin for the larger design community. The plugin is called the Ghost UXWriter and has a set of UX copies cataloged.</p>
+<p>Writing UX copies can be a little frustrating and confusing, and sometimes we are unsure about how to get the right word. To crack the code for the UX copies, we at Zeta Design wanted to build a Figma plugin for the larger design community. The plugin is called the Ghost UXWriter and has a set of UX copies cataloged.</p>
+<p>Writing UX copies can be a little frustrating and confusing, and sometimes we are unsure about how to get the right word. To crack the code for the UX copies, we at Zeta Design wanted to build a Figma plugin for the larger design community. The plugin is called the Ghost UXWriter and has a set of UX copies cataloged.</p>
+<h4>Transform Your Idea Into Reality with Ether a Leading Digital Agency</h4>
+<p>Step 1: Download the plugin from Figma community, search Ghost UXWriter
+Step 2: Open the plugin on your artboard
+Step 3: Search for your copy or look through the different categories of the copies
+Step 4: Select the type of error you are looking for. You will get three different copies for each error
+Step 5: Tap on the cards to insert text in your frames
+And you are all geared up to make your UX copies more fun and exciting 😎</p>
+'),
+('2025-07-22', 
+'Today’s best design trends for digital products', 
+'blog_7.png', 'blog_7.png', 'uploads/images/blogs/blog_7.png', 'image/png', 2, 3, 
+'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The Maker is a decentralized. We aim to attain the.',
+'<h3>Transform Your Idea Into Reality with Ether a Leading Digital Agency</h3>
+<p>Writing UX copies can be a little frustrating and confusing, and sometimes we are unsure about how to get the right word. To crack the code for the UX copies, we at Zeta Design wanted to build a Figma plugin for the larger design community. The plugin is called the Ghost UXWriter and has a set of UX copies cataloged and categorized with a voice and tone variation ranging from plain, casual to playful. The intention to build this Figma plugin originated from our Medium blog post, ‘Designing voice and tone for error messages.</p>
+<p>Writing UX copies can be a little frustrating and confusing, and sometimes we are unsure about how to get the right word. To crack the code for the UX copies, we at Zeta Design wanted to build a Figma plugin for the larger design community. The plugin is called the Ghost UXWriter and has a set of UX copies cataloged.</p>
+<p>Writing UX copies can be a little frustrating and confusing, and sometimes we are unsure about how to get the right word. To crack the code for the UX copies, we at Zeta Design wanted to build a Figma plugin for the larger design community. The plugin is called the Ghost UXWriter and has a set of UX copies cataloged.</p>
+<p>Writing UX copies can be a little frustrating and confusing, and sometimes we are unsure about how to get the right word. To crack the code for the UX copies, we at Zeta Design wanted to build a Figma plugin for the larger design community. The plugin is called the Ghost UXWriter and has a set of UX copies cataloged.</p>
+<h4>Transform Your Idea Into Reality with Ether a Leading Digital Agency</h4>
+<p>Step 1: Download the plugin from Figma community, search Ghost UXWriter
+Step 2: Open the plugin on your artboard
+Step 3: Search for your copy or look through the different categories of the copies
+Step 4: Select the type of error you are looking for. You will get three different copies for each error
+Step 5: Tap on the cards to insert text in your frames
+And you are all geared up to make your UX copies more fun and exciting 😎</p>
+'),
+('2025-10-12', 
+'Today’s best design trends for digital products', 
+'blog_8.png', 'blog_8.png', 'uploads/images/blogs/blog_8.png', 'image/png', 3, 3, 
+'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The Maker is a decentralized. We aim to attain the.',
+'<h3>Transform Your Idea Into Reality with Ether a Leading Digital Agency</h3>
+<p>Writing UX copies can be a little frustrating and confusing, and sometimes we are unsure about how to get the right word. To crack the code for the UX copies, we at Zeta Design wanted to build a Figma plugin for the larger design community. The plugin is called the Ghost UXWriter and has a set of UX copies cataloged and categorized with a voice and tone variation ranging from plain, casual to playful. The intention to build this Figma plugin originated from our Medium blog post, ‘Designing voice and tone for error messages.</p>
+<p>Writing UX copies can be a little frustrating and confusing, and sometimes we are unsure about how to get the right word. To crack the code for the UX copies, we at Zeta Design wanted to build a Figma plugin for the larger design community. The plugin is called the Ghost UXWriter and has a set of UX copies cataloged.</p>
+<p>Writing UX copies can be a little frustrating and confusing, and sometimes we are unsure about how to get the right word. To crack the code for the UX copies, we at Zeta Design wanted to build a Figma plugin for the larger design community. The plugin is called the Ghost UXWriter and has a set of UX copies cataloged.</p>
+<p>Writing UX copies can be a little frustrating and confusing, and sometimes we are unsure about how to get the right word. To crack the code for the UX copies, we at Zeta Design wanted to build a Figma plugin for the larger design community. The plugin is called the Ghost UXWriter and has a set of UX copies cataloged.</p>
+<h4>Transform Your Idea Into Reality with Ether a Leading Digital Agency</h4>
+<p>Step 1: Download the plugin from Figma community, search Ghost UXWriter
+Step 2: Open the plugin on your artboard
+Step 3: Search for your copy or look through the different categories of the copies
+Step 4: Select the type of error you are looking for. You will get three different copies for each error
+Step 5: Tap on the cards to insert text in your frames
+And you are all geared up to make your UX copies more fun and exciting 😎</p>
+'),
+('2025-11-11', 
+'Today’s best design trends for digital products', 
+'blog_9.png', 'blog_9.png', 'uploads/images/blogs/blog_9.png', 'image/png', 3, 1, 
+'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The Maker is a decentralized. We aim to attain the.',
+'<h3>Transform Your Idea Into Reality with Ether a Leading Digital Agency</h3>
+<p>Writing UX copies can be a little frustrating and confusing, and sometimes we are unsure about how to get the right word. To crack the code for the UX copies, we at Zeta Design wanted to build a Figma plugin for the larger design community. The plugin is called the Ghost UXWriter and has a set of UX copies cataloged and categorized with a voice and tone variation ranging from plain, casual to playful. The intention to build this Figma plugin originated from our Medium blog post, ‘Designing voice and tone for error messages.</p>
+<p>Writing UX copies can be a little frustrating and confusing, and sometimes we are unsure about how to get the right word. To crack the code for the UX copies, we at Zeta Design wanted to build a Figma plugin for the larger design community. The plugin is called the Ghost UXWriter and has a set of UX copies cataloged.</p>
+<p>Writing UX copies can be a little frustrating and confusing, and sometimes we are unsure about how to get the right word. To crack the code for the UX copies, we at Zeta Design wanted to build a Figma plugin for the larger design community. The plugin is called the Ghost UXWriter and has a set of UX copies cataloged.</p>
+<p>Writing UX copies can be a little frustrating and confusing, and sometimes we are unsure about how to get the right word. To crack the code for the UX copies, we at Zeta Design wanted to build a Figma plugin for the larger design community. The plugin is called the Ghost UXWriter and has a set of UX copies cataloged.</p>
+<h4>Transform Your Idea Into Reality with Ether a Leading Digital Agency</h4>
+<p>Step 1: Download the plugin from Figma community, search Ghost UXWriter
+Step 2: Open the plugin on your artboard
+Step 3: Search for your copy or look through the different categories of the copies
+Step 4: Select the type of error you are looking for. You will get three different copies for each error
+Step 5: Tap on the cards to insert text in your frames
+And you are all geared up to make your UX copies more fun and exciting 😎</p>
+'),
+('2026-01-12', 
+'Today’s best design trends for digital products', 
+'blog_10.png', 'blog_10.png', 'uploads/images/blogs/blog_10.png', 'image/png', 1, 3, 
+'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The Maker is a decentralized. We aim to attain the.',
+'<h3>Transform Your Idea Into Reality with Ether a Leading Digital Agency</h3>
+<p>Writing UX copies can be a little frustrating and confusing, and sometimes we are unsure about how to get the right word. To crack the code for the UX copies, we at Zeta Design wanted to build a Figma plugin for the larger design community. The plugin is called the Ghost UXWriter and has a set of UX copies cataloged and categorized with a voice and tone variation ranging from plain, casual to playful. The intention to build this Figma plugin originated from our Medium blog post, ‘Designing voice and tone for error messages.</p>
+<p>Writing UX copies can be a little frustrating and confusing, and sometimes we are unsure about how to get the right word. To crack the code for the UX copies, we at Zeta Design wanted to build a Figma plugin for the larger design community. The plugin is called the Ghost UXWriter and has a set of UX copies cataloged.</p>
+<p>Writing UX copies can be a little frustrating and confusing, and sometimes we are unsure about how to get the right word. To crack the code for the UX copies, we at Zeta Design wanted to build a Figma plugin for the larger design community. The plugin is called the Ghost UXWriter and has a set of UX copies cataloged.</p>
+<p>Writing UX copies can be a little frustrating and confusing, and sometimes we are unsure about how to get the right word. To crack the code for the UX copies, we at Zeta Design wanted to build a Figma plugin for the larger design community. The plugin is called the Ghost UXWriter and has a set of UX copies cataloged.</p>
+<h4>Transform Your Idea Into Reality with Ether a Leading Digital Agency</h4>
+<p>Step 1: Download the plugin from Figma community, search Ghost UXWriter
+Step 2: Open the plugin on your artboard
+Step 3: Search for your copy or look through the different categories of the copies
+Step 4: Select the type of error you are looking for. You will get three different copies for each error
+Step 5: Tap on the cards to insert text in your frames
+And you are all geared up to make your UX copies more fun and exciting 😎</p>
+'),
+('2026-04-17', 
+'Today’s best design trends for digital products', 
+'blog_6.png', 'blog_6.png', 'uploads/images/blogs/blog_6.png', 'image/png', 1, 2, 
+'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The Maker is a decentralized. We aim to attain the.',
+'<h3>Transform Your Idea Into Reality with Ether a Leading Digital Agency</h3>
+<p>Writing UX copies can be a little frustrating and confusing, and sometimes we are unsure about how to get the right word. To crack the code for the UX copies, we at Zeta Design wanted to build a Figma plugin for the larger design community. The plugin is called the Ghost UXWriter and has a set of UX copies cataloged and categorized with a voice and tone variation ranging from plain, casual to playful. The intention to build this Figma plugin originated from our Medium blog post, ‘Designing voice and tone for error messages.</p>
+<p>Writing UX copies can be a little frustrating and confusing, and sometimes we are unsure about how to get the right word. To crack the code for the UX copies, we at Zeta Design wanted to build a Figma plugin for the larger design community. The plugin is called the Ghost UXWriter and has a set of UX copies cataloged.</p>
+<p>Writing UX copies can be a little frustrating and confusing, and sometimes we are unsure about how to get the right word. To crack the code for the UX copies, we at Zeta Design wanted to build a Figma plugin for the larger design community. The plugin is called the Ghost UXWriter and has a set of UX copies cataloged.</p>
+<p>Writing UX copies can be a little frustrating and confusing, and sometimes we are unsure about how to get the right word. To crack the code for the UX copies, we at Zeta Design wanted to build a Figma plugin for the larger design community. The plugin is called the Ghost UXWriter and has a set of UX copies cataloged.</p>
+<h4>Transform Your Idea Into Reality with Ether a Leading Digital Agency</h4>
+<p>Step 1: Download the plugin from Figma community, search Ghost UXWriter
+Step 2: Open the plugin on your artboard
+Step 3: Search for your copy or look through the different categories of the copies
+Step 4: Select the type of error you are looking for. You will get three different copies for each error
+Step 5: Tap on the cards to insert text in your frames
+And you are all geared up to make your UX copies more fun and exciting 😎</p>
+');
+
+insert into views(id_blog, id_user) values(1,1), (1,2), (1,3), (2,1), (2,2), (2,3), (2,9), (2,8);
+
+insert into reviews(text, author) values 
+('Finsweet has been a wonderful partner to work with. I have been a customer now for the past few months now and I have had nothing but positive experiences!', 1),
+('Finsweet has been a wonderful partner to work with. I have been a customer now for the past few months now and I have had nothing but positive experiences!', 2),
+('Finsweet has been a wonderful partner to work with. I have been a customer now for the past few months now and I have had nothing but positive experiences!', 3);

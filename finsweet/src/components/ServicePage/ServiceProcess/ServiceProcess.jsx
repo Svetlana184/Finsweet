@@ -1,14 +1,23 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styles from "./ServiceProcess.module.scss";
 import shape from "../../../assets/shapes/process_shape.svg";
-import {steps} from "../../../mockupData/stepsData"
 import ProcessSteps from './ProcessSteps';
 import Title1 from "../../common/Title1/Title1"
 import SimpleTag from '../../common/SimpleTag/SimpleTag';
 import SimpleTextDark from "../../common/SimpleTextDark/SimpleTextDark"
+import useSteps from '../../../hooks/getSteps'
 
 const ServiceProcess = ({color = 'rgba(249, 249, 255, 1)'}) => {
-    const [data, setData] = useState(steps);
+    const { data, loading, error } = useSteps('process');
+
+    if (loading) {
+        return <div>Loading...</div>;
+    }
+
+    if (error) {
+        return <div>Error: {error}</div>;
+    }
+
 
   return (
     <section style={{backgroundColor: color}} className={styles.service_process}>
@@ -21,7 +30,7 @@ const ServiceProcess = ({color = 'rgba(249, 249, 255, 1)'}) => {
             <img src={shape} alt="" />
         </div>
         <div className={styles.service_process_steps}>
-            {data.map(item => <ProcessSteps order={item.order} icon={item.icon} title={item.title} text={item.text} isFirst={item.isFirst} isLast={item.isLast}/>)}
+            {data.map(item => <ProcessSteps key={item.id_step} order={item.order_step} icon={item.icon_file_path} title={item.title} text={item.description} isFirst={item.is_first} isLast={item.is_last}/>)}
         </div>
     </section>
   )

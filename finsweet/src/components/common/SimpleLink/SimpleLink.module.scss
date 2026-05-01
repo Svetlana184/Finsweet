@@ -10,3 +10,14 @@
         margin-left: 12px;
     }
 }
+
+  @media (max-width: 425px){
+    .read_more{
+        p{
+            font-size: 14px;
+        }
+        img{
+            width: 20px;
+        }
+    }
+  }

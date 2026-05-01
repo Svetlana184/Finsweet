@@ -35,3 +35,20 @@
         }
     }
 }
+
+@media (max-width: 425px){
+    .teamwork{
+        width: 100%;
+        padding: 0;
+        .teamwork_list{
+            div{
+                width: 50%;
+            }
+        }
+        .teamwork_text{
+            width: 100%;
+            height: auto;
+            margin-bottom: 32px;
+        }
+    }
+}
