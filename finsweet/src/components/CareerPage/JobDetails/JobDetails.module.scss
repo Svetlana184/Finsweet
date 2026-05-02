@@ -44,6 +44,27 @@
 
   @media (max-width: 425px){
     .job_details{
+        justify-content: flex-start;
+        div{
+            width: 100%;
+            height: 5vh;
+            padding-left: 0;
+            padding-right: 0;
+            .button_unactive, .button_active{
+                font-size: 10px;
+            }
+        }
+        ul{
+            width: 100%;
+            li{
+                font-size: 12px;
+            }
+        }
+    }
+  }
+
+@media (min-width: 426px) and (max-width: 768px){
+    .job_details{
         width: 100%;
         height: 100vh;
         div{
@@ -58,4 +79,22 @@
             width: 90%;
         }
     }
-  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px){
+    .job_details{
+        width: 100%;
+        height: 100vh;
+        div{
+            width: 100%;
+            padding-left: 0;
+            padding-right: 0;
+            .button_unactive, .button_active{
+                font-size: 18px;
+            }
+        }
+        ul{
+            width: 90%;
+        }
+    }
+}

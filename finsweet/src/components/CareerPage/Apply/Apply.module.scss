@@ -58,6 +58,61 @@
 
 @media (max-width: 425px){
     .apply{
+        width: 80%;
+        height: 100vh;
+        form{
+            .div_checkbox{
+                width: 100%;
+                flex-direction: row;
+                align-items: flex-start;
+                label{
+                    width: 100%;
+                    font-size: 12px;
+                }
+            }
+            .apply_big_input{
+                height: 10%;
+            }
+            .div_input{
+                flex-direction: column;
+                input{
+                    width: 100%;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 426px) and (max-width: 768px){
+    .apply{
+        width: 90%;
+        form{
+            .div_checkbox{
+                width: 100%;
+                flex-direction: column;
+                align-items: flex-start;
+                label{
+                    width: 100%;
+                    margin-bottom: 10px;
+                }
+            }
+            .apply_big_input{
+                height: 20%;
+            }
+            .div_input{
+                flex-direction: column;
+                input{
+                    width: 100%;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px){
+    .apply{
         width: 90%;
         form{
             .div_checkbox{

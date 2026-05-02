@@ -4,3 +4,9 @@
     opacity: 87%;
     font-weight: 400;
 }
+
+@media (max-width: 425px){
+    .simple_text{
+        font-size: 14px;
+    }
+}

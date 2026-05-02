@@ -108,3 +108,100 @@
     }
 }
 }
+
+@media (min-width: 426px) and (max-width: 768px){
+    .about_us{
+    height: 150vh;
+    .about_us_title{
+        flex-direction: column;
+        h3{
+            width: 100%;
+        }
+        div{
+            height: 60%;
+            width: 100%;
+        }
+    }
+    .about_us_images{
+        height: auto;
+        width: 100%;
+        flex-direction: column;
+        gap: 12px;
+        img{
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+        .about_us_image_last{
+            display: none;
+        }
+    }
+    .about_us_bottom{
+        align-items: flex-start;
+        flex-direction: column;
+        height: 20%;
+        ul{
+            flex-wrap: wrap;
+            width: 100%;
+            li{
+                width: 45%;
+                height: 45%;
+                h5{
+                    font-size: 24px;
+                }
+                p{
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}}
+
+@media (min-width: 769px) and (max-width: 1024px){
+    .about_us{
+        height: 150vh;
+        .about_us_title{
+            flex-direction: column;
+            h3{
+                width: 100%;
+            }
+            div{
+                height: 60%;
+                width: 100%;
+            }
+        }
+        .about_us_images{
+            height: auto;
+            width: 100%;
+            flex-direction: column;
+            gap: 12px;
+            img{
+                width: 100%;
+                height: auto;
+                object-fit: contain;
+            }
+            .about_us_image_last{
+                display: none;
+            }
+        }
+        .about_us_bottom{
+            align-items: flex-start;
+            flex-direction: column;
+            height: 20%;
+            ul{
+                flex-wrap: wrap;
+                width: 100%;
+                li{
+                    width: 45%;
+                    height: 45%;
+                    h5{
+                        font-size: 24px;
+                    }
+                    p{
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}

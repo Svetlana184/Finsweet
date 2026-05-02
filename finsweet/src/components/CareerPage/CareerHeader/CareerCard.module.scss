@@ -18,3 +18,39 @@
        
     }
 }
+
+@media (max-width: 425px){
+    .career_card{
+        width: 100%;
+        height: 20vh;
+        padding: 16px;
+        .career_text{
+            height: 70%;
+            p{
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+@media (min-width: 426px) and (max-width: 768px){
+    .career_card{
+        width: 100%;
+        height: auto;
+        padding: 32px;
+        .career_text{
+            height: auto;
+        }
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px){
+    .career_card{
+        width: 100%;
+        height: auto;
+        padding: 32px;
+        .career_text{
+            height: auto;
+        }
+    }
+}

@@ -37,3 +37,10 @@
     height: 210px;
     padding: 24px;
 }}
+
+@media (min-width: 769px) and (max-width: 1024px){
+    .services_card{
+    width: calc(100% - 48px);
+    height: 210px;
+    padding: 24px;
+}}

@@ -124,3 +124,39 @@
         align-self: flex-end;
     }
 }}
+
+@media (min-width: 769px) and (max-width: 1024px){
+    .title_blog{
+    height: 60vh;
+    flex-direction: column-reverse;
+    .title_blog_text{
+        width: 100%;
+        height: 90%;
+        .title_author{
+            flex-direction: row;
+            img{
+                height: 32px;
+                width: 32px;
+                border-radius: 20px;
+            }
+            h6{
+                font-weight: 400;
+                font-size: 12px;
+                width: auto;
+            }
+            p{
+                opacity: 60%;
+                font-size: 12px;
+            }
+            div{
+                display: none;
+            }
+        }
+            
+    }
+    .title_blog_shape{
+        width: 32px;
+        display: flex;
+        align-self: flex-end;
+    }
+}}

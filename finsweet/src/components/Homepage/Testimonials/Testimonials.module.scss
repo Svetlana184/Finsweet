@@ -65,3 +65,11 @@
     padding-bottom: 5vh;
     padding-top: 5vh;
 }}
+
+@media (min-width: 769px) and (max-width: 1024px){
+    .testimonials{
+    height: 100vh;
+    flex-direction: column;
+    padding-bottom: 5vh;
+    padding-top: 5vh;
+}}

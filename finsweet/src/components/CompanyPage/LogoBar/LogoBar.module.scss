@@ -16,6 +16,29 @@
     .logo_bar{
         flex-direction: column;
         height: auto;
+        align-items: center;
+        img{
+            width: 50vw;
+            margin-top: 4vh;
+        }
+    }
+}
+
+@media (min-width: 426px) and (max-width: 768px){
+    .logo_bar{
+        flex-direction: column;
+        height: auto;
+        img{
+            width: 50vw;
+            margin-top: 4vh;
+        }
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px){
+    .logo_bar{
+        flex-direction: column;
+        height: auto;
         img{
             width: 50vw;
             margin-top: 4vh;

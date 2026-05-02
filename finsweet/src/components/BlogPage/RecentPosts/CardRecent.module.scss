@@ -56,8 +56,44 @@
             width: 100%;
             height: auto;
             h5{
-                font-size: 18px;
+                font-size: 16px;
             }
         }
     }
 }
+
+@media (min-width: 426px) and (max-width: 768px){
+    .card_recent{
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        .card_recent_pic{
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .card_recent_text{
+            padding: 16px;
+            width: 100%;
+            height: auto;
+            h5{
+                font-size: 18px;
+}}}}
+
+@media (min-width: 769px) and (max-width: 1024px){
+    .card_recent{
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        .card_recent_pic{
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .card_recent_text{
+            padding: 16px;
+            width: 100%;
+            height: auto;
+            h5{
+                font-size: 18px;
+}}}}

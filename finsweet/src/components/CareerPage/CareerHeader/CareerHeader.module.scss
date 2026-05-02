@@ -51,6 +51,54 @@
 @media (max-width: 425px){
     .career_header{
         .career_text{
+            height: 45vh;
+            flex-direction: column-reverse;
+            gap: 32px;
+            .career_shape{
+                display: flex;
+                align-self: flex-end;
+                width: 32px;
+            }
+            div{
+                width: 100%;
+                h2{
+                    font-size: 20px;
+                    width: 100%;
+                }
+                p{
+                    width: 100%;
+                }
+                img{
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 426px) and (max-width: 768px){
+    .career_header{
+        .career_text{
+            height: auto;
+            flex-direction: column;
+            gap: 32px;
+            div{
+                width: 100%;
+                h2{
+                    font-size: 32px;
+                    width: 100%;
+                }
+                p{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}   
+
+@media (min-width: 769px) and (max-width: 1024px){
+    .career_header{
+        .career_text{
             height: auto;
             flex-direction: column;
             gap: 32px;

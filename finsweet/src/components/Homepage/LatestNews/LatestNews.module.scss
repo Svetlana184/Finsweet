@@ -40,3 +40,31 @@
         }
 }
 }
+
+@media (min-width: 426px) and (max-width: 768px){
+    .latest{
+        height: 80vh;
+        padding-top: 5vh;
+        padding-bottom: 5vh;
+        height: auto;
+        gap: 30px;
+        .list{
+            flex-direction: column;
+            width: 100%;
+            gap: 30px;
+        }
+}}
+
+@media (min-width: 769px) and (max-width: 1024px){
+    .latest{
+        height: 80vh;
+        padding-top: 5vh;
+        padding-bottom: 5vh;
+        height: auto;
+        gap: 30px;
+        .list{
+            flex-direction: column;
+            width: 100%;
+            gap: 30px;
+        }
+}}

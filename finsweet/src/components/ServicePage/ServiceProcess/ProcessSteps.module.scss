@@ -89,3 +89,15 @@
     }
     }
 }
+
+@media (min-width: 769px) and (max-width: 1024px){
+    .process_steps{
+    width: 100%;
+    .shape_top{
+        width: 100%;
+    }
+    .shape_bottom{
+        width: 100%;
+    }
+    }
+}

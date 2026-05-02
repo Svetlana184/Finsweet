@@ -25,3 +25,19 @@
         }
     }
 }
+
+@media (min-width: 426px) and (max-width: 768px){
+    .all_posts{
+        .all_posts_cards{
+            flex-direction: column;
+        }
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px){
+    .all_posts{
+        .all_posts_cards{
+            flex-direction: column;
+        }
+    }
+}
